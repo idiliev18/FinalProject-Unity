@@ -7,6 +7,7 @@ TagManager:
   - Arduino
   - LED
   - Player1
+  - BookShelf
   layers:
   - Default
   - TransparentFX
