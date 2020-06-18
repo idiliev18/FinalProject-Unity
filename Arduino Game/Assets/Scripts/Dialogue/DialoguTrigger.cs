@@ -6,10 +6,9 @@ using TMPro;
 
 public class DialoguTrigger : MonoBehaviour
 {
-    /*
+    
     public Dialogue dialogue;
     public DialogueManager dialogueManager;
-    public FixedButton fixedButton;
 
     public Image buttton;
 
@@ -17,14 +16,7 @@ public class DialoguTrigger : MonoBehaviour
 
     public TextMeshProUGUI AText;
 
-    PlayerControl controls;
-
-    void Awake()
-    {
-        controls = new PlayerControl();
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -41,21 +33,10 @@ public class DialoguTrigger : MonoBehaviour
         {
             dialogueManager.show = true;
                 
-            if (fixedButton.Pressed || controls.Gameplay.Attack.triggered)
+            if (true)
             {
                 dialogueManager.StartDialogue(dialogue);
             }
         }
     }
-
-    void OnEnable()
-    {
-        controls.Gameplay.Enable();
-    }
-
-    void OnDisable()
-    {
-        controls.Gameplay.Disable();
-    }
-    */
 }
