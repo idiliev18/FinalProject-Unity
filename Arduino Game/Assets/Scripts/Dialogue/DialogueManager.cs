@@ -5,42 +5,22 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;
-    public TextMeshProUGUI nameText;
-
-	public DialoguTrigger dialoguTrigger;
+	public TextMeshProUGUI nameText;
+	public TextMeshProUGUI dialogueText;
 
 	public Animator animator;
-	public Animator playerAnimator;
 
 	private Queue<string> sentences;
 
-	//PlayerControl controls;
-
-	public Rigidbody2D player;
-	public PlayerMovement playerMovement;
-
-	public bool show = false;
-
-	[Range (0.01f, 1f)]
-	public float time;
-
-	void Start()
+	// Use this for initialization
+	void Awake()
 	{
 		sentences = new Queue<string>();
 	}
 
 	public void StartDialogue(Dialogue dialogue)
 	{
-		show = true;
-
 		animator.SetBool("IsOpen", true);
-
-		playerAnimator.SetFloat("speed", 0);
-
-		player.simulated = false;
-		playerMovement.enabled = false;
-		dialoguTrigger.enabled = false;
 
 		nameText.text = dialogue.name;
 
@@ -70,23 +50,23 @@ public class DialogueManager : MonoBehaviour
 	IEnumerator TypeSentence(string sentence)
 	{
 		dialogueText.text = "";
-
-		char[] array = sentence.ToCharArray();
-
-		for (int i = 0; i < array.Length; i++)
+		foreach (char letter in sentence.ToCharArray())
 		{
-			char letter = array[i];
 			dialogueText.text += letter;
-			yield return new WaitForSecondsRealtime(time);
+			yield return null;
 		}
+		StartCoroutine(Wait());
+	}
+
+	IEnumerator Wait()
+	{
+		yield return new WaitForSeconds(5);
+		DisplayNextSentence();
 	}
 
 	void EndDialogue()
 	{
 		animator.SetBool("IsOpen", false);
-		playerMovement.enabled = true;
-		dialoguTrigger.enabled = true;
-		player.simulated = true;
-		//show = false;
 	}
+
 }
