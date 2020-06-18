@@ -1,0 +1,4 @@
+orange E79900
+green 34E32B
+grey A2A1A0
+gold D4AF37
