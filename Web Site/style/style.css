@@ -1,0 +1,33 @@
+.carousel-inner:after {
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background:rgba(0,0,0,0.6);
+}
+
+.carousel-caption{
+    margin-bottom: 20%;
+    font-family: 'Notable',sans-serif;
+}
+div.container hr{
+    border-top: 2px solid white;
+}
+
+div.nav-text a{
+    font-family: 'Graduate', cursive;
+    color:white;
+}
+a:hover,a:link,a:active,a:active{
+    text-decoration: none;
+}
+
+#carouselExampleIndicators{
+    position:absolute;
+    width:100%;
+    top:0;
+    z-index:-1
+}
+
