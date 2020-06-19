@@ -47,6 +47,65 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 0
     min: 0
+--- !u!114 &-2068959773251364694
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfbdbb87d3286943a057f7791b43141, type: 3}
+  m_Name: ChannelMixer
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  redOutRedIn:
+    m_OverrideState: 1
+    m_Value: 100
+    min: -200
+    max: 200
+  redOutGreenIn:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -200
+    max: 200
+  redOutBlueIn:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -200
+    max: 200
+  greenOutRedIn:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -200
+    max: 200
+  greenOutGreenIn:
+    m_OverrideState: 1
+    m_Value: 100
+    min: -200
+    max: 200
+  greenOutBlueIn:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -200
+    max: 200
+  blueOutRedIn:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -200
+    max: 200
+  blueOutGreenIn:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -200
+    max: 200
+  blueOutBlueIn:
+    m_OverrideState: 1
+    m_Value: 110
+    min: -200
+    max: 200
 --- !u!114 &-1089681784825345134
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -138,70 +197,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   components:
   - {fileID: -1089681784825345134}
-  - {fileID: 280928184738631374}
+  - {fileID: -2068959773251364694}
   - {fileID: 6521334286148566867}
   - {fileID: 7606736533285701217}
   - {fileID: -664905722761759922}
   - {fileID: -6480685713909156680}
---- !u!114 &280928184738631374
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfbdbb87d3286943a057f7791b43141, type: 3}
-  m_Name: ChannelMixer
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  redOutRedIn:
-    m_OverrideState: 1
-    m_Value: 100
-    min: -200
-    max: 200
-  redOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  redOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  greenOutRedIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  greenOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 100
-    min: -200
-    max: 200
-  greenOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutRedIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutGreenIn:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -200
-    max: 200
-  blueOutBlueIn:
-    m_OverrideState: 1
-    m_Value: 100
-    min: -200
-    max: 200
 --- !u!114 &6521334286148566867
 MonoBehaviour:
   m_ObjectHideFlags: 3
