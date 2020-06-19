@@ -13,21 +13,17 @@
     font-family: 'Notable',sans-serif;
 }
 div.container hr{
-    border-top: 2px solid white;
+    border-top: 2px solid #1565e6;
 }
 
 div.nav-text a{
     font-family: 'Graduate', cursive;
-    color:white;
+    color:#1565e6;
 }
 a:hover,a:link,a:active,a:active{
     text-decoration: none;
 }
-
-#carouselExampleIndicators{
-    position:absolute;
-    width:100%;
-    top:0;
-    z-index:-1
+#goalTitle{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 65px;
 }
-
