@@ -8,6 +8,8 @@ TagManager:
   - LED
   - Player1
   - BookShelf
+  - Rope
+  - Rope1
   layers:
   - Default
   - TransparentFX

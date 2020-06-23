@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class pinScript : MonoBehaviour
 {
-    public bool plus;
-    public bool minus;
-
-    public GameObject light;
+    public GameObject LEDLight;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player1"))
+        if (other.gameObject.CompareTag("Rope"))
         {
             other.transform.position = transform.position;
-            plus = true;
-            minus = true;
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player1"))
+        if (other.gameObject.CompareTag("Rope"))
         {
             other.transform.position = transform.position;
         }
@@ -29,13 +24,9 @@ public class pinScript : MonoBehaviour
 
     public void Test()
     {
-        if (plus && minus)
+        if (true)
         {
-            light.SetActive(true);
-        }
-        else
-        {
-            light.SetActive(false);
+            LEDLight.SetActive(true);
         }
     }
 }
