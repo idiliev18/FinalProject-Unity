@@ -3,10 +3,10 @@
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
-    exit;
-}
+//if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+//    header("location: welcome.php");
+//    exit;
+//}
 
 // Include config file
 require_once "config.php";
@@ -17,7 +17,6 @@ $username_err = $password_err = "";
 
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-
     // Check if username is empty
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter username.";
@@ -35,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = :username";
+        $sql = "SELECT id, username, password, arduino_game FROM users WHERE username = :username";
 
         if($stmt = $pdo->prepare($sql)){
             // Bind variables to the prepared statement as parameters
@@ -52,7 +51,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $id = $row["id"];
                         $username = $row["username"];
                         $hashed_password = $row["password"];
+                        $game = $row["arduino_game"];
                         if(password_verify($password, $hashed_password)){
+
+
+                            $remember_token = hash('sha256', $username);
+                            if (trim($_POST["remember"])!="1"){
+                                setcookie("Re",hash('sha256', $username),0);
+                                setcookie("Ga",$game, 0);
+                            }else{
+                                setcookie("Re",hash('sha256', $username), time()+60*60*24*30);
+                                setcookie("Ga",$game, time()+60*60*24*30);
+                            }
+
+                            $sql = "UPDATE users  SET remember_token = :remember_token  WHERE id = :id ";
+
+                            if($stmt = $pdo->prepare($sql)) {
+
+                                $stmt->bindParam(":remember_token", $remember_token, PDO::PARAM_STR);
+                                $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+
+                                if($stmt->execute()){
+                                    // Redirect to login page
+                                    header("location: index.html");
+                                } else{
+                                    echo "Something went wrong. Please try again later.";
+                                }
+                            }
                             // Password is correct, so start a new session
                             session_start();
 
@@ -62,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;
 
                             // Redirect user to welcome page
-                            header("location: welcome.php");
+                            header("location: index.php");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
@@ -114,12 +139,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
         <div class="form-group">
             <label class="form-check-label">Remember me &nbsp;&nbsp;</label>
-            <input type="radio" class="form-check-input" value="remember">
+            <input type="checkbox" name="remember" class="form-check-input" value="1">
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-primary" value="Login">
         </div>
         <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+        <a href="resetPassword.php">Forgot password </a>
     </form>
 </div>
 </body>

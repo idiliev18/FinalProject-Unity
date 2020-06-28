@@ -1,4 +1,40 @@
+<?php
+require_once "session.php";
+function login_or_greeting($username){
 
+    if (!empty(trim($username))){
+        echo '<div class="col-3">
+                <a href="login.php" class="text-decoration-none h1">'.$username.'</a>
+            </div>';
+    }
+    else{
+        echo '
+    <div class="col-3">
+                <a href="login.php" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
+            </div>';
+    }
+
+}
+function reg_or_logout($username){
+    if (!empty(trim($username))){
+        echo  '<div class="col-3">
+                <a href="?logout" class="text-decoration-none h1">Log out </a>
+            </div>';
+    }
+    else{
+        echo ' <div class="col-3">
+                <a href="register.php" class="text-decoration-none h1">REGISTER </a>
+            </div>';
+    }
+}
+if (isset($_GET['logout'])){
+    setcookie("Re","",time() - 3600);
+    setcookie("Ga","",time() - 3600);
+    $page = $_SERVER['PHP_SELF'];
+    header("location: $page");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,22 +68,10 @@
             <div class="col-3">
                 <a href="#" class="text-decoration-none  h1">DEV TEAM</a>
             </div>
-            <div class="col-3">
-                <a href="login.html" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
-            </div>
-            <div class="col-3">
-                <a href="register.php" class="text-decoration-none h1">REGISTER </a>
-            </div>
+            <?php  login_or_greeting($username);?>
 
-            <div class="col-3">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button" >Log out</button>
-                    </div>
-                </div>
-            </div>
+            <?php  reg_or_logout($username);?>
+
         </div>
         <hr>
     </div>

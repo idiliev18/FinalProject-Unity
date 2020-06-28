@@ -53,7 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Attempt to execute the prepared statement
             if($stmt->execute()){
-                if($stmt->rowCount() == 2){
+                if($stmt->rowCount() == 1){
                     $username_err = "This username is already taken.";
                 } else{
                     $username = trim($_POST["username"]);
