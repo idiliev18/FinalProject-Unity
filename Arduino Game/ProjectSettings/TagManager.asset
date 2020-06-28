@@ -10,6 +10,8 @@ TagManager:
   - BookShelf
   - Rope
   - Rope1
+  - Pin+
+  - Pin-
   layers:
   - Default
   - TransparentFX

@@ -6,25 +6,37 @@ public class pinScript : MonoBehaviour
 {
     public GameObject LEDLight;
 
+    public plusAndMinus plusAndMinus;
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Rope"))
+        if (other.gameObject.CompareTag("Pin+"))
         {
-            other.transform.position = transform.position;
+            plusAndMinus.plus = true;
+        }
+
+        if (other.gameObject.CompareTag("Pin-"))
+        {
+            plusAndMinus.minus = true;
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Rope"))
+        if (other.gameObject.CompareTag("Pin+"))
         {
-            other.transform.position = transform.position;
+            plusAndMinus.plus = false;
+        }
+
+        if (other.gameObject.CompareTag("Pin+"))
+        {
+            plusAndMinus.minus = false;
         }
     }
 
     public void Test()
     {
-        if (true)
+        if (plusAndMinus.plus == true && plusAndMinus.minus == true)
         {
             LEDLight.SetActive(true);
         }
