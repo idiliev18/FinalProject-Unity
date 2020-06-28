@@ -1,9 +1,0 @@
-orange E79900
-green 34E32B
-grey A2A1A0
-gold D4AF37
-silver mettalic AAA9AD
-green house wall B4C345
-green house table EEFF76
-green house cushions E3FF45
-blue house walls 5681AA
