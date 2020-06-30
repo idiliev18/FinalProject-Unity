@@ -1,41 +1,60 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pinScript : MonoBehaviour
 {
-    public bool plus;
-    public bool minus;
+    public GameObject LEDLight;
 
-    public GameObject light;
+    public plusAndMinus plusAndMinus;
+
+    public int level = 1;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player1"))
+        if (other.gameObject.CompareTag("Pin+"))
         {
-            other.transform.position = transform.position;
-            plus = true;
-            minus = true;
+            plusAndMinus.plus = true;
+        }
+
+        if (other.gameObject.CompareTag("Pin-"))
+        {
+            plusAndMinus.minus = true;
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player1"))
+        if (other.gameObject.CompareTag("Pin+"))
         {
-            other.transform.position = transform.position;
+            plusAndMinus.plus = false;
+        }
+
+        if (other.gameObject.CompareTag("Pin+"))
+        {
+            plusAndMinus.minus = false;
         }
     }
 
     public void Test()
     {
-        if (plus && minus)
+        if (plusAndMinus.plus == true && plusAndMinus.minus == true)
         {
-            light.SetActive(true);
-        }
-        else
-        {
-            light.SetActive(false);
+            LEDLight.SetActive(true);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            level = SceneManager.GetActiveScene().buildIndex + 1;
+            SaveSystem.SaveData(this);
+            Debug.Log(level);
+            //NextScene();
         }
     }
+
+    IEnumerator NextScene()
+    {
+        yield return new WaitForSecondsRealtime(5);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        level = SceneManager.GetActiveScene().buildIndex + 1;
+    }
 }
+

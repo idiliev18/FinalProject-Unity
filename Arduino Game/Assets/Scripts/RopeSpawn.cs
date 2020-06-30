@@ -65,7 +65,7 @@ public class RopeSpawn : MonoBehaviour
                 if (snapFirst)
                 {
                     tmp.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-                    tmp.tag = "Player1";
+                    tmp.tag = "Rope1";
                     tmp.GetComponent<CapsuleCollider>().isTrigger = true;
                 }
             }
@@ -79,7 +79,7 @@ public class RopeSpawn : MonoBehaviour
         {
             parentObjects.transform.Find(parentObjects.transform.childCount.ToString()).GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             parentObjects.transform.Find(parentObjects.transform.childCount.ToString()).GetComponent<CapsuleCollider>().isTrigger = true;
-            parentObjects.transform.Find(parentObjects.transform.childCount.ToString()).tag = "Player1";
+            parentObjects.transform.Find(parentObjects.transform.childCount.ToString()).tag = "Rope1";
             parentObjects.transform.Find(parentObjects.transform.childCount.ToString()).transform.position = posFinal.transform.position;
         }
     }

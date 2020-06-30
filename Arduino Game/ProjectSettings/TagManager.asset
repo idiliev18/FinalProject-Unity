@@ -7,6 +7,11 @@ TagManager:
   - Arduino
   - LED
   - Player1
+  - BookShelf
+  - Rope
+  - Rope1
+  - Pin+
+  - Pin-
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Player
   - 
   - 
   - 
