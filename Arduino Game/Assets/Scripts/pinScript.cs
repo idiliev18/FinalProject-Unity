@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pinScript : MonoBehaviour
 {
     public GameObject LEDLight;
 
     public plusAndMinus plusAndMinus;
+
+    public int level = 1;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -39,6 +42,19 @@ public class pinScript : MonoBehaviour
         if (plusAndMinus.plus == true && plusAndMinus.minus == true)
         {
             LEDLight.SetActive(true);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            level = SceneManager.GetActiveScene().buildIndex + 1;
+            SaveSystem.SaveData(this);
+            Debug.Log(level);
+            //NextScene();
         }
     }
+
+    IEnumerator NextScene()
+    {
+        yield return new WaitForSecondsRealtime(5);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        level = SceneManager.GetActiveScene().buildIndex + 1;
+    }
 }
+
