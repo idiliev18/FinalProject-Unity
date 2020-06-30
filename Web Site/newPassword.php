@@ -1,16 +1,20 @@
 <?php
+require_once "config.php";
+session_start();
 
-$email =$password=$confirm_password=$token="";
-$password_err=$confirm_password_err ="";
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+$email = $password = $confirm_password = $token = "";
+$password_err = $confirm_password_err = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET['token'])) {
         $sql = "SELECT email FROM password_reset WHERE token=:token";
-        if ($stmp = $pdo->prepare($sql)) {
-            $stmp->bindParam(':token', $_GET['token']);
-            if ($stmp->execute()) {
-                if ($stmp->rowCount() == 1) {
-                    if ($row = $stmp->fetch()) {
-                        $email = $row['email'];
+        if ($stmt = $pdo->prepare($sql)) {
+            $stmt->bindParam(':token', $_GET['token']);
+            if ($stmt->execute()) {
+                if ($stmt->rowCount() > 0) {
+                    if ($row = $stmt->fetch()) {
+
+                       $_SESSION['email']=$row['email'];
                     }
                 } else {
                     header("location: index.php");
@@ -22,37 +26,54 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 // Validate password
-if(empty(trim($_POST["newPassword"]))){
-    $password_err = "Please enter a password.";
-} elseif(strlen(trim($_POST["newPassword"])) < 6){
-    $password_err = "Password must have atleast 6 characters.";
-} else{
-    $password = trim($_POST["newPassword"]);
-}
 
-if(empty(trim($_POST["ConfirmNewPassword"]))){
-    $confirm_password_err = "Please confirm password.";
-} else{
-    $confirm_password = trim($_POST["ConfirmNewPassword"]);
-    if(empty($password_err) && ($password != $confirm_password)){
-        $confirm_password_err = "Password did not match.";
-    }
-}
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-if (empty($password_err)&&empty($confirm_password_err)){
-    $sql = "UPDATE password FROM users SET password = :password WHERE email=:email";
-if($stmt = $pdo->prepare($sql)) {
-    $password  = password_hash($password, PASSWORD_DEFAULT);
+    if (empty(trim($_POST["newPassword"]))) {
+        $password_err = "Please enter a password.";
+    } elseif (strlen(trim($_POST["newPassword"])) < 6) {
+        $password_err = "Password must have atleast 6 characters.";
+    } else {
+        $password = trim($_POST["newPassword"]);
+    }
 
-    $stmp ->bindParam(":password", $password,PDO::PARAM_STR);
-    $stmp ->bindParam(":email", $email,PDO::PARAM_STR);
-    if ($stmp->execute()){
-        header("location: login.php");
+    if (empty(trim($_POST["ConfirmNewPassword"]))) {
+        $confirm_password_err = "Please confirm password.";
+    } else {
+        $confirm_password = trim($_POST["ConfirmNewPassword"]);
+        if (empty($password_err) && ($password != $confirm_password)) {
+            $confirm_password_err = "Password did not match.";
+        }
     }
-    else{
-        echo "Something went wrong. Please try again later.";
+    if (empty($password_err) && empty($confirm_password_err)) {
+        $sql = "UPDATE users SET password = :password WHERE email= :email";
+        if ($stmt = $pdo->prepare($sql)) {
+            $password = password_hash($password, PASSWORD_DEFAULT);
+
+            $stmt->bindParam(":password", $password, PDO::PARAM_STR);
+            $stmt->bindParam(":email", $email, PDO::PARAM_STR);
+
+            if ($stmt->execute()) {
+
+                $sql = "DELETE FROM password_reset WHERE email = :email";
+                if ($stmt = $pdo->prepare($sql)) {
+
+                    $email = $_SESSION['email'];
+                    $stmt->bindParam(":email", $email, PDO::PARAM_STR);
+
+                    if ($stmt->execute()) {
+                        session_destroy();
+                       header("location: login.php");
+                    }
+                }
+
+            } else {
+                echo "Something went wrong. Please try again later.";
+            }
+        }
     }
-}
+
+
 }
 ?>
 
@@ -94,5 +115,4 @@ if($stmt = $pdo->prepare($sql)) {
     </form>
 </body>
 </html>
-</div>
 

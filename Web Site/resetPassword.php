@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->execute()) {
 
                 if ($stmt->rowCount() == 1) {
-                    $token = $token . date("Y/m/d").date("h:i:s");
-                    $token = hash('sha256', $email);
+                    $token = $email . date("Y/m/d").date("h:i:s");
+                    $token = hash('sha256', $token);
                     $sql = "INSERT INTO password_reset(email,token) VALUES (:email,:token)";
 
                     if ($stmt = $pdo->prepare($sql)) {

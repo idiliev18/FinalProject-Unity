@@ -1,0 +1,145 @@
+<?php
+require_once "session.php";
+function login_or_greeting($username)
+{
+
+    if (!empty(trim($username))) {
+        echo '<div class="col-3">
+                <a href="login.php" class="text-decoration-none h1">'.$username.'</a>
+            </div>';
+    } else {
+        echo '
+    <div class="col-3">
+                <a href="login.php" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
+            </div>';
+    }
+
+}
+
+function reg_or_logout($username)
+{
+    if (!empty(trim($username))) {
+        echo '<div class="col-3">
+                <a href="?logout" class="text-decoration-none h1">Log out </a>
+            </div>';
+    } else {
+        echo ' <div class="col-3">
+                <a href="register.php" class="text-decoration-none h1">REGISTER </a>
+            </div>';
+    }
+}
+
+if (isset($_GET['logout'])) {
+    setcookie("Re", "", time() - 3600);
+    setcookie("Ga", "", time() - 3600);
+    $page = $_SERVER['PHP_SELF'];
+    header("location: $page");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&family=Notable&family=Titan+One&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="team">
+<div id="nav" class="container">
+    <div class="row justify-content-center nav-text pt-3">
+        <div class="col-3">
+            <a href="#" class="text-decoration-none h1">GAMES</a>
+        </div>
+        <div class="col-3">
+            <a href="#" class="text-decoration-none  h1">DEV TEAM</a>
+        </div>
+        <?php login_or_greeting($username); ?>
+
+        <?php reg_or_logout($username); ?>
+
+    </div>
+    <hr>
+</div>
+<div class="container team">
+    <div class="row team pt-4">
+        <div class="col-4 h100 w100">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Стоян Иванов</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 h100 w100">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Ема Матева</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 h100 w100">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Илиян Илиев</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row team pt-4">
+        <div class="col-4 h100 w100">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Желязко</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 h100 w100">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Иван Димов</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 h100 w100">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Стас Узунов</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
