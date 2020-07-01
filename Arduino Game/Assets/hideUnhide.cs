@@ -8,8 +8,9 @@ public class hideUnhide : MonoBehaviour
     public GameObject unhideObject;
     public GameObject button;
 
-    private void OnMouseOver()
+    void OnMouseOver()
     {
+        Debug.Log("Error1");
         if (Input.GetKeyDown(KeyCode.E))
         {
             unhideObject.SetActive(true);
