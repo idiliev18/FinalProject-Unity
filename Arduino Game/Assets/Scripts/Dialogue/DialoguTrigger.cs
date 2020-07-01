@@ -8,6 +8,7 @@ public class DialoguTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public DialogueManager dialogueManager;
+    public AudioSource audioSource;
 
     bool firstTime = false;
 
@@ -17,6 +18,7 @@ public class DialoguTrigger : MonoBehaviour
         {
             dialogueManager.StartDialogue(dialogue);
             firstTime = true;
+            audioSource.Play();
         }
     }
 }
