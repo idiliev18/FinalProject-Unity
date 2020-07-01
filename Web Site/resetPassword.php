@@ -41,14 +41,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             $mail = new PHPMailer();
 
-                            $message = "Hi there, click on this <a href=\"http://localhost:8888/newPassword.php?token=" . $token . "\">link</a> to reset your password on our site";
+                            $message = "Hi there, click on this <a href=\"http://localhost:2502/FinalProject-Unity/Web%20Site/newPassword.php?token=" . $token . "\">link</a> to reset your password on our site";
                             $name = "TEST";
                             // specify SMTP credentials
                             $mail->isSMTP();
                             $mail->Host = 'smtp.mailtrap.io';
                             $mail->SMTPAuth = true;
-                            $mail->Username = 'dc4e50f08f6639';
-                            $mail->Password = '4c2b6d6bab3cb6';
+                            $mail->Username = '5edeafb5d9285f';
+                            $mail->Password = 'a27f3f128328f2';
                             $mail->SMTPSecure = 'tls';
                             $mail->Port = 2525;
 

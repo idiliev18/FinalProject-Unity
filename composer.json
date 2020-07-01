@@ -1,0 +1,6 @@
+{
+    "name": "ivandimov/final-project-unity",
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    }
+}
