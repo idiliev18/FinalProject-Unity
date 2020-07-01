@@ -61977,8 +61977,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 60ab005bc3b02b7419e0bbe37f84e219, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -62023,7 +62023,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -62053,7 +62053,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1.1
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -101883,6 +101883,7 @@ MonoBehaviour:
     - 'Now you have to connect the diode, the resistor and the push switch in the
       correct places in the breadboard. '
   dialogueManager: {fileID: 1630797109}
+  audioSource: {fileID: 5275654384183940233}
 --- !u!65 &8549945415042738341
 BoxCollider:
   m_ObjectHideFlags: 0
