@@ -60,7 +60,7 @@ public class DialogueManager : MonoBehaviour
 
 	IEnumerator Wait()
 	{
-		yield return new WaitForSeconds(5);
+		yield return new WaitForSeconds(8);
 		DisplayNextSentence();
 	}
 

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class CameraControllerRTS : MonoBehaviour
 {
@@ -16,26 +16,51 @@ public class CameraControllerRTS : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
+            {
+                pos.x -= panSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
+            {
+                pos.x += panSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
+            {
+                pos.z -= panSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey("d") || Input.mousePosition.x >= Screen.height - panBorderThickness)
+            {
+                pos.z += panSpeed * Time.deltaTime;
+            }
 
-        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
-        {
-            pos.x -= panSpeed * Time.deltaTime;
+            scroll = Input.GetAxis("Mouse ScrollWheel");
+            pos.y -= scroll * scrollSpeed * Time.deltaTime;
         }
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            pos.x += panSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
-        {
-            pos.z -= panSpeed * Time.deltaTime;
-        }
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.height - panBorderThickness)
-        {
-            pos.z += panSpeed * Time.deltaTime;
+            if (Input.GetKey("w") || Input.mousePosition.x >= Screen.height - panBorderThickness)
+            {
+                pos.x -= panSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey("s") || Input.mousePosition.x <= panBorderThickness)
+            {
+                pos.x += panSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey("a") || Input.mousePosition.y <= panBorderThickness)
+            {
+                pos.z += panSpeed * Time.deltaTime;
+            }
+            if (Input.GetKey("d") || Input.mousePosition.y >= Screen.height - panBorderThickness)
+            {
+                pos.z -= panSpeed * Time.deltaTime;
+            }
+
+            scroll = Input.GetAxis("Mouse ScrollWheel");
+            pos.y -= scroll * scrollSpeed * Time.deltaTime;
         }
 
-        scroll = Input.GetAxis("Mouse ScrollWheel");
-        pos.y -= scroll * scrollSpeed * Time.deltaTime;
 
         pos.x = Mathf.Clamp(pos.x, panLimit2.x, panLimit.x);
         pos.z = Mathf.Clamp(pos.z, panLimit2.y, panLimit.y);

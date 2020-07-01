@@ -9,8 +9,14 @@ public class DialoguTrigger : MonoBehaviour
     public Dialogue dialogue;
     public DialogueManager dialogueManager;
 
-    void Start()
+    bool firstTime = false;
+
+    private void OnTriggerEnter(Collider other)
     {
-        dialogueManager.StartDialogue(dialogue);
+        if (!firstTime)
+        {
+            dialogueManager.StartDialogue(dialogue);
+            firstTime = true;
+        }
     }
 }

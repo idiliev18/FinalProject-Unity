@@ -11,6 +11,7 @@ public class pinScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Enter");
         if (other.gameObject.CompareTag("Pin+"))
         {
             plusAndMinus.plus = true;
