@@ -6,11 +6,11 @@ public class ButtonManager : MonoBehaviour
 {
     public GameObject Camera;
     public GameObject Canvas;
-    public GameObject Coliders;
-    public BoxCollider boxCollider;
+    public GameObject Cable1;
+    public GameObject Cable2;
 
     public Vector3 targetPosition;
-    public Quaternion targetRotation;
+    public Quaternion targetRotation1 = Quaternion.Euler(270, 270, 180);
 
     public MoveCamera moveCameraScript;
     public PlayerMovement PlayerMovementScript;
@@ -31,20 +31,20 @@ public class ButtonManager : MonoBehaviour
             PlayerMovementScript.enabled = false;
             meshRendererButton.enabled = false;
             meshRendererPlayer.enabled = false;
-            boxCollider.enabled = false;
             cameraControllerRTS.enabled = true;
             objectsSelect.enabled = true;
             volume.profile.TryGet(out d);
             d.active = false;
-            Coliders.SetActive(true);
 
             Canvas.SetActive(false);
+            Cable1.SetActive(true);
+            Cable2.SetActive(true);
 
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
 
             Camera.transform.position = targetPosition;
-            Camera.transform.rotation = targetRotation;
+            Camera.transform.rotation = targetRotation1;
         }
     }
 }
