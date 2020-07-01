@@ -7,12 +7,27 @@
     right:0;
     background:rgba(0,0,0,0.6);
 }
+
+.card{
+    border: 4px solid #74c6ff !important;
+}
+body,html{
+    height: 100%;
+}
 #team{
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    /*background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);*/
+    background-image: url("/img/teamBG.png");
+    background-color: #ffffff;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
 }
-#nav{
-    background-color: white; !important;
-}
+/*#nav{*/
+/*    background-color: white; !important;*/
+/*}*/
 .carousel-caption{
     margin-bottom: 20%;
     font-family: 'Notable',sans-serif;

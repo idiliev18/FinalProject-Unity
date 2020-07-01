@@ -71,74 +71,69 @@ if (isset($_GET['logout'])) {
     </div>
     <hr>
 </div>
-<div class="container team">
-    <div class="row team pt-4">
+<div class="container ">
+    <div class="row pt-4">
         <div class="col-4 h100 w100">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Стоян Иванов</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4 h100 w100">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Ема Матева</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4 h100 w100">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <img class="card-img-top" src="img/manager.svg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Илиян Илиев</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
+                    <p class="card-text">Manager</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4 h100 w100">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/web.svg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Иван Димов</h5>
+                    <p class="card-text">Web developer</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-4 h100 w100">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/designer.svg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Ема Матева</h5>
+                    <p class="card-text">Designer</p>
                 </div>
             </div>
         </div>
 
     </div>
-    <div class="row team pt-4">
+    <div class="row team pt-4 pb-5">
         <div class="col-4 h100 w100">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <img class="card-img-top" src="img/dev.svg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Желязко</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
+                    <p class="card-text">Developer</p>
                 </div>
             </div>
         </div>
         <div class="col-4 h100 w100">
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Иван Димов</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-4 h100 w100">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="img/DUNERA.jpg" alt="Card image cap">
+                <img class="card-img-top" src="img/director.svg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Стас Узунов</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
+                    <p class="card-text">Game Director</p>
                 </div>
             </div>
         </div>
+        <div class="col-4 h100 w100">
 
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="img/dev.svg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Стоян Иванов</h5>
+                    <p class="card-text">Developer</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>
