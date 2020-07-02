@@ -128,13 +128,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div id="nav" class="container">
     <div class="row justify-content-center nav-text pt-3">
         <div class="col-3">
-            <a href="#" class="text-decoration-none h1">GAMES</a>
+            <a href="games.php" class="text-decoration-none h1">GAMES</a>
         </div>
         <div class="col-3">
-            <a href="#" class="text-decoration-none  h1">DEV TEAM</a>
+            <a href="team.php" class="text-decoration-none  h1">DEV TEAM</a>
         </div>
         <div class="col-3">
-            <a href="login1.php" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
+            <a href="login.php" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
         </div>
         <div class="col-3">
             <a href="register.php" class="text-decoration-none h1">REGISTER</a>

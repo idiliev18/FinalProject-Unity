@@ -53,10 +53,10 @@ function gameStatus(){
 <div  class="container">
     <div class="row justify-content-center nav-text pt-3" id="nav">
         <div class="col-3">
-            <a href="#" class="text-decoration-none h1">GAMES</a>
+            <a href="games.php" class="text-decoration-none h1">GAMES</a>
         </div>
         <div class="col-3">
-            <a href="#" class="text-decoration-none  h1">DEV TEAM</a>
+            <a href="team.php" class="text-decoration-none  h1">DEV TEAM</a>
         </div>
         <?php login_or_greeting($username); ?>
 
