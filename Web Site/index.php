@@ -1,38 +1,6 @@
 <?php
 require_once "session.php";
-function login_or_greeting($username){
 
-    if (!empty(trim($username))){
-        echo '<div class="col-3">
-                <a href="login.php" class="text-decoration-none h1">'.$username.'</a>
-            </div>';
-    }
-    else{
-        echo '
-    <div class="col-3">
-                <a href="login.php" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
-            </div>';
-    }
-
-}
-function reg_or_logout($username){
-    if (!empty(trim($username))){
-        echo  '<div class="col-3">
-                <a href="?logout" class="text-decoration-none h1">Log out </a>
-            </div>';
-    }
-    else{
-        echo ' <div class="col-3">
-                <a href="register.php" class="text-decoration-none h1">REGISTER </a>
-            </div>';
-    }
-}
-if (isset($_GET['logout'])){
-    setcookie("Re","",time() - 3600);
-    setcookie("Ga","",time() - 3600);
-    $page = $_SERVER['PHP_SELF'];
-    header("location: $page");
-}
 
 ?>
 <!DOCTYPE html>
@@ -63,10 +31,10 @@ if (isset($_GET['logout'])){
     <div id="nav" class="container">
         <div class="row justify-content-center nav-text pt-3">
             <div class="col-3">
-                <a href="#" class="text-decoration-none h1">GAMES</a>
+                <a href="games.php" class="text-decoration-none h1">GAMES</a>
             </div>
             <div class="col-3">
-                <a href="#" class="text-decoration-none  h1">DEV TEAM</a>
+                <a href="team.php" class="text-decoration-none  h1">DEV TEAM</a>
             </div>
             <?php  login_or_greeting($username);?>
 
@@ -131,72 +99,13 @@ if (isset($_GET['logout'])){
 
             </div>
             <div class="col-6 d-flex justify-content-center">
-                <h4 id="goalContent">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف
-                    عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum"
-                    في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.</h4>
+                <h4 id="goalContent">The purposes of our set of games are to help student to learn how the Arduino works. In the first game, Arduino 101, they will learn the main Arduino components and how to use them while assembling simple schemes. The next game Arduino 202 is the programming. The teacher will teach you how to program basic things, for example how to turn on and off a diode. After the student learn everything in the first two games, he unlocks the final game, Arduino 303. In this game the student's task is to make a project with the skills he learned in the previous games. Like that playing all the games the student can learn the basics of Arduino.  </h4>
             </div>
             <div class="col">
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="container">
-        <footer class="page-footer font-small cyan darken-3">
-
-            <!-- Footer Elements -->
-            <div class="container">
-
-                <!-- Grid row-->
-                <div class="row">
-
-                    <!-- Grid column -->
-                    <div class="col-md-12 py-5">
-                        <div class="mb-5 flex-center">
-
-                            <!-- Facebook -->
-                            <a class="fb-ic">
-                                <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!-- Twitter -->
-                            <a class="tw-ic">
-                                <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!-- Google +-->
-                            <a class="gplus-ic">
-                                <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!--Linkedin -->
-                            <a class="li-ic">
-                                <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!--Instagram-->
-                            <a class="ins-ic">
-                                <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-                            </a>
-                            <!--Pinterest-->
-                            <a class="pin-ic">
-                                <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row-->
-
-            </div>
-            <!-- Footer Elements -->
-
-            <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-            </div>
-            <!-- Copyright -->
-
-        </footer>
-    </div>
-    <!-- Footer -->
 
 </body>
 

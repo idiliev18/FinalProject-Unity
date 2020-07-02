@@ -53,12 +53,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $hashed_password = $row["password"];
                         $game = $row["arduino_game"];
                         if(password_verify($password, $hashed_password)){
-
-
                             $remember_token = hash('sha256', $username);
-                            if (trim($_POST["remember"])!="1"){
-                                setcookie("Re",hash('sha256', $username),0);
+                            if (!isset($_POST["remember"])){
+                                setcookie("Re",hash('sha256', $username), 0);
                                 setcookie("Ga",$game, 0);
+
                             }else{
                                 setcookie("Re",hash('sha256', $username), time()+60*60*24*30);
                                 setcookie("Ga",$game, time()+60*60*24*30);
@@ -73,19 +72,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                                 if($stmt->execute()){
                                     // Redirect to login page
+
                                     header("location: index.html");
                                 } else{
                                     echo "Something went wrong. Please try again later.";
                                 }
                             }
-                            // Password is correct, so start a new session
-                            session_start();
-
-                            // Store data in session variables
-                            $_SESSION["loggedin"] = true;
-                            $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
-
                             // Redirect user to welcome page
                             header("location: index.php");
                         } else{
