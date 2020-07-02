@@ -96,40 +96,78 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body {
-            font: 14px sans-serif;
-        }
 
-        .wrapper {
-            width: 350px;
-            padding: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style/login.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#form").fadeIn(2000);
+        });
+    </script>
+
+    <title>Title</title>
 </head>
+
+<!--Navigation Bar-->
 <body>
-<div class="wrapper">
-    <h2>Reset password</h2>
-    <p>Enter the email of you account</p>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
-            <label>Email</label>
-            <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
-            <span class="help-block"><?php echo $email_err; ?></span>
+<div id="nav" class="container">
+    <div class="row justify-content-center nav-text pt-3">
+        <div class="col-3">
+            <a href="#" class="text-decoration-none h1">GAMES</a>
         </div>
-        <div class="form-group">
-            <input type="submit" class="btn btn-primary" value="resetPassword">
+        <div class="col-3">
+            <a href="#" class="text-decoration-none  h1">DEV TEAM</a>
         </div>
-    </form>
+        <div class="col-3">
+            <a href="login1.php" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
+        </div>
+        <div class="col-3">
+            <a href="register.php" class="text-decoration-none h1">REGISTER</a>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<!--Login Form-->
+
+
+<div class="bg">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5" id="form" style="display: none">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Enter you email</h5>
+                        <form class="form-signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                            <div class="form-label-group">
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Username"
+                                       name="username" value="<?php echo $email; ?>">
+                                <label for="inputEmail" class="label">Email</label>
+                                <span class="help-block"><?php echo $email_err; ?></span>
+                            </div>
+
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Reset password
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
+
 </html>
 
