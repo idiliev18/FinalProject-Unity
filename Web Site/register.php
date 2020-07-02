@@ -178,7 +178,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <form class="form-signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-label-group">
                                 <input type="email" id="inputEmail" class="form-control" placeholder="Username"
-                                       name="username" value="<?php echo $email; ?>">
+                                       name="email" value="<?php echo $email; ?>">
                                 <label for="inputEmail" class="label">Email</label>
                                 <span class="help-block"><?php echo $email_err; ?></span>
                             </div>
@@ -208,10 +208,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in
                             </button>
                         </form>
-                        <div class="card-text text-center pt-2">
-                            <p>You can't login.<a href="resetPassword.php">Forgot password</a></p>
-                            <p>Don't have account.<a href="register.php">Register</a></p>
-                        </div>
                     </div>
                 </div>
             </div>
