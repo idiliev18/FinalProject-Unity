@@ -1,49 +1,64 @@
 .carousel-inner:after {
-    content:"";
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background:rgba(0,0,0,0.6);
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
 }
 
-.card{
+.card {
     border: 4px solid #74c6ff !important;
 }
-body,html{
+
+body,
+html {
     height: 100%;
 }
-#team{
-    /*background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);*/
-    background-image: url("/img/teamBG.png");
-    background-color: #ffffff;
 
+#team {
+    /*background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);*/
+    background-image: url("../img/teamBG.png");
+    background-color: #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     height: 100%;
 }
+
+
 /*#nav{*/
+
+
 /*    background-color: white; !important;*/
+
+
 /*}*/
-.carousel-caption{
+
+.carousel-caption {
     margin-bottom: 20%;
-    font-family: 'Notable',sans-serif;
+    font-family: 'Notable', sans-serif;
 }
-div.container hr{
+
+div.container hr {
     border-top: 2px solid #1565e6;
 }
 
-div.nav-text a{
+div.nav-text a {
     font-family: 'Graduate', cursive;
-    color:#1565e6;
+    color: #1565e6;
 }
-a:hover,a:link,a:active,a:active{
+
+a:hover,
+a:link,
+a:active,
+a:active {
     text-decoration: none;
 }
-#goalTitle{
+
+#goalTitle {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 65px;
 }
