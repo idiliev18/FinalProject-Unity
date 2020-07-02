@@ -13,6 +13,6 @@ This is our Unity project. We made game named Arduino 101. It's like an Arduino 
 ## Documentation and Presentation
 
 You can find the presentation and the documentation here:
-* [Presentation](https://codingburgas-my.sharepoint.com/:p:/r/personal/emmateva18_codingburgas_bg/_layouts/15/Doc.aspx?sourcedoc=%7B720C556B-D2D9-4B77-B020-4C35026FAD8F%7D&file=Presentation%204.pptx&wdOrigin=OFFICECOM-WEB.MAIN.REC&action=edit&mobileredirect=true&cid=474231f8-e676-454a-a9ac-8fc21a723424)
-* [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/idiliev18_codingburgas_bg/EekuIw3Z8LlEtry1hc1GJroB7uATz4AoqGHHb4BFz0JRIA?e=0Fxpb4)
+* [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/emmateva18_codingburgas_bg/EWtVDHLZ0ndLsCBMNQJvrY8BREurZ2m4ARIDW9Ewy9k32g?e=oGhZ7S)
+* [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/emmateva18_codingburgas_bg/Eftb_JhE33pGhIpIC8wIsAYBSF00PmSvqIzWUv1Vy-KSTw?e=08nVC4)
 
