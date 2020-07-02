@@ -183,9 +183,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <span class="help-block"><?php echo $email_err; ?></span>
                             </div>
                             <div class="form-label-group">
-                                <input type="text" id="inputEmail" class="form-control" placeholder="Username"
+                                <input type="text" id="username" class="form-control" placeholder="Username"
                                        name="username" value="<?php echo $username; ?>">
-                                <label for="inputEmail" class="label">Username</label>
+                                <label for="username" class="label">Username</label>
                                 <span class="help-block"><?php echo $username_err; ?></span>
                             </div>
                             <div class="form-label-group">
@@ -195,9 +195,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <span class="help-block"><?php echo $password_err; ?></span>
                             </div>
                             <div class="form-label-group">
-                                <input type="password" id="inputPassword" class="form-control" placeholder="Confirm password"
+                                <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password"
                                        name="confirm_password" value="<?php echo $confirm_password; ?>">
-                                <label for="inputPassword" class="label">Confirm password</label>
+                                <label for="confirmPassword" class="label">Confirm password</label>
                                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
                             </div>
                             <div class="custom-control custom-checkbox mb-3">
