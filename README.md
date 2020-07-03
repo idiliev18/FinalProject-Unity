@@ -1,5 +1,5 @@
 # The Games
-This is our Unity project. We made game named Arduino 101. It's like an Arduino simulation
+This is our Unity project. We made the game "Arduino 101". It's like an Arduino simulation
 
 ## Our Team
 
