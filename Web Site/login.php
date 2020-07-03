@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         });
     </script>
 
-    <title>Title</title>
+    <title>Login</title>
 </head>
 
 <!--Navigation Bar-->

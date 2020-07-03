@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         });
     </script>
 
-    <title>Title</title>
+    <title>Register</title>
 </head>
 
 <!--Navigation Bar-->

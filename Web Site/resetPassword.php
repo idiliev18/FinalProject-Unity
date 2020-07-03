@@ -41,14 +41,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                             $mail = new PHPMailer();
 
-                            $message = "Hi there, click on this <a href=\"http://localhost:2502/FinalProject-Unity/Web%20Site/newPassword.php?token=" . $token . "\">link</a> to reset your password on our site";
+                            $message = "Hi there, click on this <a href=\"http://87.119.112.231:2502/FinalProject-Unity/Web%20Site/newPassword.php?token=" . $token . "\">link</a> to reset your password on our site";
                             $name = "TEST";
                             // specify SMTP credentials
                             $mail->isSMTP();
                             $mail->Host = 'smtp.mailtrap.io';
                             $mail->SMTPAuth = true;
-                            $mail->Username = '5edeafb5d9285f';
-                            $mail->Password = 'a27f3f128328f2';
+                            $mail->Username = 'dc4e50f08f6639';
+                            $mail->Password = '4c2b6d6bab3cb6';
                             $mail->SMTPSecure = 'tls';
                             $mail->Port = 2525;
 
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         });
     </script>
 
-    <title>Title</title>
+    <title>Reset Password</title>
 </head>
 
 <!--Navigation Bar-->
@@ -153,7 +153,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <form class="form-signin" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-label-group">
                                 <input type="email" id="inputEmail" class="form-control" placeholder="Username"
-                                       name="username" value="<?php echo $email; ?>">
+                                       name="email" value="<?php echo $email; ?>">
                                 <label for="inputEmail" class="label">Email</label>
                                 <span class="help-block"><?php echo $email_err; ?></span>
                             </div>

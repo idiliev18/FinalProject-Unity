@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         });
     </script>
 
-    <title>Title</title>
+    <title>New Password</title>
 </head>
 
 <!--Navigation Bar-->
@@ -103,13 +103,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div id="nav" class="container">
     <div class="row justify-content-center nav-text pt-3">
         <div class="col-3">
-            <a href="#" class="text-decoration-none h1">GAMES</a>
+            <a href="games.php" class="text-decoration-none h1">GAMES</a>
         </div>
         <div class="col-3">
-            <a href="#" class="text-decoration-none  h1">DEV TEAM</a>
+            <a href="team.php" class="text-decoration-none  h1">DEV TEAM</a>
         </div>
         <div class="col-3">
-            <a href="login1.php" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
+            <a href="login.php" class="text-decoration-none h1">&nbsp;&nbsp; LOGIN</a>
         </div>
         <div class="col-3">
             <a href="register.php" class="text-decoration-none h1">REGISTER</a>
@@ -138,9 +138,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <span class="help-block"><?php echo $password_err; ?></span>
                             </div>
                             <div class="form-label-group">
-                                <input type="password" id="inputPassword" class="form-control" placeholder="Confirm password"
+                                <input type="password" id="conPassword" class="form-control" placeholder="Confirm password"
                                        name="ConfirmNewPassword" value="<?php echo $confirm_password; ?>">
-                                <label for="inputPassword" class="label">Confirm password</label>
+                                <label for="conPassword" class="label">Confirm password</label>
                                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
                             </div>
                             <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in

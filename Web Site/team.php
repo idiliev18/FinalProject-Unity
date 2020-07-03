@@ -19,7 +19,7 @@ require_once "session.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Team</title>
 </head>
 <body id="team">
 <div id="nav" class="container">

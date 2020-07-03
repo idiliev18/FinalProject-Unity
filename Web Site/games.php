@@ -22,7 +22,7 @@ function gameStatus(){
             echo ' <a href="?getGame" class="btn btn-primary">Get the game</a>';
         }
         else{
-            echo ' <a href="img/DUNERA.jpg" download="dunerche<3" class="btn btn-primary">Download the game</a>';
+            echo ' <a href="Arduino 101.exe" download="Arduino 101.exe" class="btn btn-primary">Download the game</a>';
         }
     }
     else{
@@ -47,7 +47,7 @@ function gameStatus(){
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Games</title>
 </head>
 <body>
 <div  class="container">
