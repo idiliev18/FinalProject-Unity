@@ -9,6 +9,7 @@ This is our Unity project. We made the game "Arduino 101". It's like an Arduino 
 - Ivan Dimov (Web Developer)
 - Stas Uzunov (Game Director)
 - Dimitar Kalchev (Designer, Developer, Other)
+- Petar Georgiev (Mentor)
 
 ## Documentation and Presentation
 
