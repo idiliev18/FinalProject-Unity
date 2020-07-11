@@ -33,6 +33,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FlatButton">
+      <HintPath>..\..\..\VSCNTRL\FlatButton.dll</HintPath>
+    </Reference>
+    <Reference Include="JImageButton">
+      <HintPath>..\..\..\VSCNTRL\JImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="JMaterialTextbox">
+      <HintPath>..\..\..\VSCNTRL\JMaterialTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox">
+      <HintPath>..\..\..\VSCNTRL\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JThinButton">
+      <HintPath>..\..\..\VSCNTRL\JThinButton.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

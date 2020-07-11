@@ -28,174 +28,195 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TeamName = new System.Windows.Forms.Label();
-            this.LogInTitle = new System.Windows.Forms.Label();
             this.SignIn = new System.Windows.Forms.Label();
             this.user = new System.Windows.Forms.Label();
-            this.UserInputUsername = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.Label();
-            this.UserInputPassword = new System.Windows.Forms.TextBox();
-            this.SignInButton = new System.Windows.Forms.Button();
+            this.SignInPanel = new System.Windows.Forms.Panel();
+            this.ErrorMessage = new System.Windows.Forms.Label();
+            this.LogInBtn = new System.Windows.Forms.Button();
             this.SignUpLink = new System.Windows.Forms.LinkLabel();
-            this.AccountYok = new System.Windows.Forms.Label();
-            this.ForgotPass = new System.Windows.Forms.Label();
             this.ResetPassLink = new System.Windows.Forms.LinkLabel();
+            this.jTextBox1 = new JTextBox.JTextBox();
+            this.UserInputUserName = new JTextBox.JTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.SignInPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // TeamName
-            // 
-            this.TeamName.AutoSize = true;
-            this.TeamName.Font = new System.Drawing.Font("MS Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TeamName.Location = new System.Drawing.Point(81, 78);
-            this.TeamName.Name = "TeamName";
-            this.TeamName.Size = new System.Drawing.Size(133, 13);
-            this.TeamName.TabIndex = 0;
-            this.TeamName.Text = "By Team Byal Dunav";
-            this.TeamName.Click += new System.EventHandler(this.TeamName_Click);
-            // 
-            // LogInTitle
-            // 
-            this.LogInTitle.AutoSize = true;
-            this.LogInTitle.Font = new System.Drawing.Font("MS Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogInTitle.Location = new System.Drawing.Point(32, 25);
-            this.LogInTitle.Name = "LogInTitle";
-            this.LogInTitle.Size = new System.Drawing.Size(223, 33);
-            this.LogInTitle.TabIndex = 1;
-            this.LogInTitle.Text = "Arduino Games";
-            this.LogInTitle.Click += new System.EventHandler(this.LogInTitle_Click);
             // 
             // SignIn
             // 
             this.SignIn.AutoSize = true;
-            this.SignIn.Font = new System.Drawing.Font("MS PGothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignIn.Location = new System.Drawing.Point(311, 115);
+            this.SignIn.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignIn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SignIn.Location = new System.Drawing.Point(95, 26);
             this.SignIn.Name = "SignIn";
-            this.SignIn.Size = new System.Drawing.Size(156, 48);
+            this.SignIn.Size = new System.Drawing.Size(144, 42);
             this.SignIn.TabIndex = 2;
             this.SignIn.Text = "Sign In";
+            this.SignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // user
             // 
             this.user.AutoSize = true;
-            this.user.Location = new System.Drawing.Point(224, 209);
+            this.user.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.user.Location = new System.Drawing.Point(69, 112);
             this.user.Name = "user";
-            this.user.Size = new System.Drawing.Size(55, 13);
+            this.user.Size = new System.Drawing.Size(103, 18);
             this.user.TabIndex = 3;
-            this.user.Text = "Username";
-            // 
-            // UserInputUsername
-            // 
-            this.UserInputUsername.Location = new System.Drawing.Point(285, 206);
-            this.UserInputUsername.Name = "UserInputUsername";
-            this.UserInputUsername.Size = new System.Drawing.Size(173, 20);
-            this.UserInputUsername.TabIndex = 4;
-            this.UserInputUsername.TextChanged += new System.EventHandler(this.UserInputUsername_TextChanged);
+            this.user.Text = "Username: ";
+            this.user.Click += new System.EventHandler(this.user_Click);
             // 
             // Password
             // 
             this.Password.AutoSize = true;
-            this.Password.Location = new System.Drawing.Point(224, 258);
+            this.Password.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.Password.Location = new System.Drawing.Point(69, 201);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(53, 13);
+            this.Password.Size = new System.Drawing.Size(92, 18);
             this.Password.TabIndex = 5;
-            this.Password.Text = "Password";
+            this.Password.Text = "Password:";
+            this.Password.Click += new System.EventHandler(this.Password_Click);
             // 
-            // UserInputPassword
+            // SignInPanel
             // 
-            this.UserInputPassword.Location = new System.Drawing.Point(291, 251);
-            this.UserInputPassword.Name = "UserInputPassword";
-            this.UserInputPassword.Size = new System.Drawing.Size(166, 20);
-            this.UserInputPassword.TabIndex = 6;
-            this.UserInputPassword.UseSystemPasswordChar = true;
+            this.SignInPanel.Controls.Add(this.ErrorMessage);
+            this.SignInPanel.Controls.Add(this.LogInBtn);
+            this.SignInPanel.Controls.Add(this.SignUpLink);
+            this.SignInPanel.Controls.Add(this.ResetPassLink);
+            this.SignInPanel.Controls.Add(this.jTextBox1);
+            this.SignInPanel.Controls.Add(this.UserInputUserName);
+            this.SignInPanel.Controls.Add(this.Password);
+            this.SignInPanel.Controls.Add(this.user);
+            this.SignInPanel.Location = new System.Drawing.Point(4, 12);
+            this.SignInPanel.Name = "SignInPanel";
+            this.SignInPanel.Size = new System.Drawing.Size(338, 458);
+            this.SignInPanel.TabIndex = 12;
+            this.SignInPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SignInPanel_Paint);
             // 
-            // SignInButton
+            // ErrorMessage
             // 
-            this.SignInButton.Location = new System.Drawing.Point(319, 277);
-            this.SignInButton.Name = "SignInButton";
-            this.SignInButton.Size = new System.Drawing.Size(100, 42);
-            this.SignInButton.TabIndex = 7;
-            this.SignInButton.Text = "Sign In";
-            this.SignInButton.UseVisualStyleBackColor = true;
+            this.ErrorMessage.AutoSize = true;
+            this.ErrorMessage.ForeColor = System.Drawing.Color.Red;
+            this.ErrorMessage.Location = new System.Drawing.Point(88, 319);
+            this.ErrorMessage.Name = "ErrorMessage";
+            this.ErrorMessage.Size = new System.Drawing.Size(0, 13);
+            this.ErrorMessage.TabIndex = 17;
+            this.ErrorMessage.Click += new System.EventHandler(this.ErrorMessage_Click);
+            // 
+            // LogInBtn
+            // 
+            this.LogInBtn.BackColor = System.Drawing.Color.White;
+            this.LogInBtn.ForeColor = System.Drawing.Color.Black;
+            this.LogInBtn.Location = new System.Drawing.Point(119, 280);
+            this.LogInBtn.Name = "LogInBtn";
+            this.LogInBtn.Size = new System.Drawing.Size(75, 23);
+            this.LogInBtn.TabIndex = 16;
+            this.LogInBtn.Text = "Log In";
+            this.LogInBtn.UseVisualStyleBackColor = false;
+            this.LogInBtn.Click += new System.EventHandler(this.LogInBtn_Click);
             // 
             // SignUpLink
             // 
             this.SignUpLink.AutoSize = true;
-            this.SignUpLink.Location = new System.Drawing.Point(412, 378);
+            this.SignUpLink.LinkColor = System.Drawing.Color.Black;
+            this.SignUpLink.Location = new System.Drawing.Point(99, 388);
             this.SignUpLink.Name = "SignUpLink";
-            this.SignUpLink.Size = new System.Drawing.Size(45, 13);
-            this.SignUpLink.TabIndex = 8;
+            this.SignUpLink.Size = new System.Drawing.Size(129, 13);
+            this.SignUpLink.TabIndex = 15;
             this.SignUpLink.TabStop = true;
-            this.SignUpLink.Text = "Sign Up";
-            this.SignUpLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignUpLink_LinkClicked);
-            // 
-            // AccountYok
-            // 
-            this.AccountYok.AutoSize = true;
-            this.AccountYok.Location = new System.Drawing.Point(301, 378);
-            this.AccountYok.Name = "AccountYok";
-            this.AccountYok.Size = new System.Drawing.Size(114, 13);
-            this.AccountYok.TabIndex = 9;
-            this.AccountYok.Text = "Do not have account?";
-            // 
-            // ForgotPass
-            // 
-            this.ForgotPass.AutoSize = true;
-            this.ForgotPass.Location = new System.Drawing.Point(301, 354);
-            this.ForgotPass.Name = "ForgotPass";
-            this.ForgotPass.Size = new System.Drawing.Size(134, 13);
-            this.ForgotPass.TabIndex = 10;
-            this.ForgotPass.Text = "Forgot Password? Reset it ";
+            this.SignUpLink.Text = "Do not have an account?";
+            this.SignUpLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SignUpLink_LinkClicked_1);
             // 
             // ResetPassLink
             // 
             this.ResetPassLink.AutoSize = true;
-            this.ResetPassLink.Location = new System.Drawing.Point(429, 354);
+            this.ResetPassLink.LinkColor = System.Drawing.Color.Black;
+            this.ResetPassLink.Location = new System.Drawing.Point(116, 365);
             this.ResetPassLink.Name = "ResetPassLink";
-            this.ResetPassLink.Size = new System.Drawing.Size(28, 13);
-            this.ResetPassLink.TabIndex = 11;
+            this.ResetPassLink.Size = new System.Drawing.Size(86, 13);
+            this.ResetPassLink.TabIndex = 14;
             this.ResetPassLink.TabStop = true;
-            this.ResetPassLink.Text = "here";
-            this.ResetPassLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ResetPassLink_LinkClicked);
+            this.ResetPassLink.Text = "Forgot Password";
+            this.ResetPassLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ResetPassLink_LinkClicked_1);
+            // 
+            // jTextBox1
+            // 
+            this.jTextBox1.AutoSize = true;
+            this.jTextBox1.BorderColor = System.Drawing.Color.Black;
+            this.jTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.jTextBox1.Hint = "";
+            this.jTextBox1.IsPassword = true;
+            this.jTextBox1.Length = 0;
+            this.jTextBox1.Location = new System.Drawing.Point(61, 222);
+            this.jTextBox1.Name = "jTextBox1";
+            this.jTextBox1.OnFocus = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.jTextBox1.OnlyChar = false;
+            this.jTextBox1.OnlyNumber = false;
+            this.jTextBox1.Size = new System.Drawing.Size(198, 39);
+            this.jTextBox1.TabIndex = 13;
+            this.jTextBox1.TextValue = "";
+            // 
+            // UserInputUserName
+            // 
+            this.UserInputUserName.AutoSize = true;
+            this.UserInputUserName.BorderColor = System.Drawing.Color.Black;
+            this.UserInputUserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.UserInputUserName.Hint = "";
+            this.UserInputUserName.IsPassword = false;
+            this.UserInputUserName.Length = 0;
+            this.UserInputUserName.Location = new System.Drawing.Point(61, 133);
+            this.UserInputUserName.Name = "UserInputUserName";
+            this.UserInputUserName.OnFocus = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UserInputUserName.OnlyChar = false;
+            this.UserInputUserName.OnlyNumber = false;
+            this.UserInputUserName.Size = new System.Drawing.Size(200, 39);
+            this.UserInputUserName.TabIndex = 12;
+            this.UserInputUserName.TextValue = "";
+            this.UserInputUserName.Load += new System.EventHandler(this.UserInputUserName_Load);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel2.Controls.Add(this.SignIn);
+            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(341, 92);
+            this.panel2.TabIndex = 12;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ResetPassLink);
-            this.Controls.Add(this.ForgotPass);
-            this.Controls.Add(this.AccountYok);
-            this.Controls.Add(this.SignUpLink);
-            this.Controls.Add(this.SignInButton);
-            this.Controls.Add(this.UserInputPassword);
-            this.Controls.Add(this.Password);
-            this.Controls.Add(this.UserInputUsername);
-            this.Controls.Add(this.user);
-            this.Controls.Add(this.SignIn);
-            this.Controls.Add(this.LogInTitle);
-            this.Controls.Add(this.TeamName);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(341, 472);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.SignInPanel);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Team Byal Dunav Launcher";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.SignInPanel.ResumeLayout(false);
+            this.SignInPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label TeamName;
-        private System.Windows.Forms.Label LogInTitle;
         private System.Windows.Forms.Label SignIn;
         private System.Windows.Forms.Label user;
-        private System.Windows.Forms.TextBox UserInputUsername;
         private System.Windows.Forms.Label Password;
-        private System.Windows.Forms.TextBox UserInputPassword;
-        private System.Windows.Forms.Button SignInButton;
+        private System.Windows.Forms.Panel SignInPanel;
+        private System.Windows.Forms.Panel panel2;
+        private JTextBox.JTextBox UserInputUserName;
+        private JTextBox.JTextBox jTextBox1;
         private System.Windows.Forms.LinkLabel SignUpLink;
-        private System.Windows.Forms.Label AccountYok;
-        private System.Windows.Forms.Label ForgotPass;
         private System.Windows.Forms.LinkLabel ResetPassLink;
+        private System.Windows.Forms.Button LogInBtn;
+        private System.Windows.Forms.Label ErrorMessage;
     }
 }
 

@@ -46,21 +46,55 @@ namespace GameLauncher
 
         private void  VisitLinkForgotPass()
         {
-
             ResetPassLink.LinkVisited = true;
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=8UZMGKuLfjY");
         }
 
-        private void SignUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+
+        private void UserInputUserName_Load(object sender, EventArgs e)
         {
-            VisitLinkSignUp();
+
         }
 
-        private void ResetPassLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void user_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Password_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogInBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void SignInPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ErrorMessage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ResetPassLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             VisitLinkForgotPass();
         }
 
-       
+        private void SignUpLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VisitLinkSignUp();
+        }
     }
 }
