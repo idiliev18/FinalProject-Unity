@@ -30,23 +30,23 @@ namespace GameLauncher
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=8UZMGKuLfjY");
         }
 
+        private void ResetPassLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VisitLinkForgotPass();
+        }
+        
+        private void SignUpLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            VisitLinkSignUp();
+        }
+        
         private void LogInBtn_Click(object sender, EventArgs e)
         {
             var username = UserInputUserName.TextValue;
             var password = UserInputPass.TextValue;
             ErrorMessages(username, password);
         }
-
-        private void ResetPassLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            VisitLinkForgotPass();
-        }
-
-        private void SignUpLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            VisitLinkSignUp();
-        }
-
+        
         private bool IsPasswordValid(string pass)
         {
 
@@ -57,7 +57,7 @@ namespace GameLauncher
             return true;
 
         }
-
+        
         private bool IsUsernameValid(string user)
         {
 
@@ -68,7 +68,7 @@ namespace GameLauncher
             return false;
 
         }
-
+       
         private void ErrorMessages(string user, string pass)
         {
             if (IsPasswordValid(pass) && IsUsernameValid(user))
