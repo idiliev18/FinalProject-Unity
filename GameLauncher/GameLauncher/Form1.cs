@@ -55,19 +55,36 @@ namespace GameLauncher
                 return false;
             }
             return true;
-            
+
+        }
+
+        private bool IsUsernameValid(string user)
+        {
+
+            if (user.Length > 0)
+            {
+                return true ;
+            }
+            return false;
+
         }
 
         private void ErrorMessages(string user, string pass)
         {
-            if(IsPasswordValid(pass))
+            if (IsPasswordValid(pass) && IsUsernameValid(user))
             {
                 ErrorMessage.Text = "";
+                AllFields.Text = "";
                 // Kum Vankata
             }
-            else
+            else if(!IsPasswordValid(pass) && IsUsernameValid(user))
             {
+                AllFields.Text = "";
                 ErrorMessage.Text = "Password should be minimum 6 symbols! ";
+            }
+            else 
+            {
+                AllFields.Text = "All fields are required!";
             }
         }
     }

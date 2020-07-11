@@ -40,6 +40,8 @@
             this.UserInputPass = new JTextBox.JTextBox();
             this.UserInputUserName = new JTextBox.JTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AllFields = new System.Windows.Forms.Label();
             this.SignInPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +82,8 @@
             // 
             // SignInPanel
             // 
+            this.SignInPanel.Controls.Add(this.AllFields);
+            this.SignInPanel.Controls.Add(this.label1);
             this.SignInPanel.Controls.Add(this.ErrorMessage);
             this.SignInPanel.Controls.Add(this.LogInBtn);
             this.SignInPanel.Controls.Add(this.SignUpLink);
@@ -118,7 +122,7 @@
             // 
             this.SignUpLink.AutoSize = true;
             this.SignUpLink.LinkColor = System.Drawing.Color.Black;
-            this.SignUpLink.Location = new System.Drawing.Point(99, 388);
+            this.SignUpLink.Location = new System.Drawing.Point(98, 388);
             this.SignUpLink.Name = "SignUpLink";
             this.SignUpLink.Size = new System.Drawing.Size(129, 13);
             this.SignUpLink.TabIndex = 15;
@@ -181,6 +185,24 @@
             this.panel2.Size = new System.Drawing.Size(341, 92);
             this.panel2.TabIndex = 12;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "label1";
+            // 
+            // AllFields
+            // 
+            this.AllFields.AutoSize = true;
+            this.AllFields.ForeColor = System.Drawing.Color.Red;
+            this.AllFields.Location = new System.Drawing.Point(110, 319);
+            this.AllFields.Name = "AllFields";
+            this.AllFields.Size = new System.Drawing.Size(0, 13);
+            this.AllFields.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +234,8 @@
         private System.Windows.Forms.LinkLabel ResetPassLink;
         private System.Windows.Forms.Button LogInBtn;
         private System.Windows.Forms.Label ErrorMessage;
+        private System.Windows.Forms.Label AllFields;
+        private System.Windows.Forms.Label label1;
     }
 }
 
