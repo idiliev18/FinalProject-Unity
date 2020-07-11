@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.SignIn = new System.Windows.Forms.Label();
             this.user = new System.Windows.Forms.Label();
             this.Password = new System.Windows.Forms.Label();
@@ -36,7 +37,7 @@
             this.LogInBtn = new System.Windows.Forms.Button();
             this.SignUpLink = new System.Windows.Forms.LinkLabel();
             this.ResetPassLink = new System.Windows.Forms.LinkLabel();
-            this.jTextBox1 = new JTextBox.JTextBox();
+            this.UserInputPass = new JTextBox.JTextBox();
             this.UserInputUserName = new JTextBox.JTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SignInPanel.SuspendLayout();
@@ -65,7 +66,6 @@
             this.user.Size = new System.Drawing.Size(103, 18);
             this.user.TabIndex = 3;
             this.user.Text = "Username: ";
-            this.user.Click += new System.EventHandler(this.user_Click);
             // 
             // Password
             // 
@@ -77,7 +77,6 @@
             this.Password.Size = new System.Drawing.Size(92, 18);
             this.Password.TabIndex = 5;
             this.Password.Text = "Password:";
-            this.Password.Click += new System.EventHandler(this.Password_Click);
             // 
             // SignInPanel
             // 
@@ -85,7 +84,7 @@
             this.SignInPanel.Controls.Add(this.LogInBtn);
             this.SignInPanel.Controls.Add(this.SignUpLink);
             this.SignInPanel.Controls.Add(this.ResetPassLink);
-            this.SignInPanel.Controls.Add(this.jTextBox1);
+            this.SignInPanel.Controls.Add(this.UserInputPass);
             this.SignInPanel.Controls.Add(this.UserInputUserName);
             this.SignInPanel.Controls.Add(this.Password);
             this.SignInPanel.Controls.Add(this.user);
@@ -93,17 +92,15 @@
             this.SignInPanel.Name = "SignInPanel";
             this.SignInPanel.Size = new System.Drawing.Size(338, 458);
             this.SignInPanel.TabIndex = 12;
-            this.SignInPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SignInPanel_Paint);
             // 
             // ErrorMessage
             // 
             this.ErrorMessage.AutoSize = true;
             this.ErrorMessage.ForeColor = System.Drawing.Color.Red;
-            this.ErrorMessage.Location = new System.Drawing.Point(88, 319);
+            this.ErrorMessage.Location = new System.Drawing.Point(69, 319);
             this.ErrorMessage.Name = "ErrorMessage";
             this.ErrorMessage.Size = new System.Drawing.Size(0, 13);
             this.ErrorMessage.TabIndex = 17;
-            this.ErrorMessage.Click += new System.EventHandler(this.ErrorMessage_Click);
             // 
             // LogInBtn
             // 
@@ -141,22 +138,22 @@
             this.ResetPassLink.Text = "Forgot Password";
             this.ResetPassLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ResetPassLink_LinkClicked_1);
             // 
-            // jTextBox1
+            // UserInputPass
             // 
-            this.jTextBox1.AutoSize = true;
-            this.jTextBox1.BorderColor = System.Drawing.Color.Black;
-            this.jTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.jTextBox1.Hint = "";
-            this.jTextBox1.IsPassword = true;
-            this.jTextBox1.Length = 0;
-            this.jTextBox1.Location = new System.Drawing.Point(61, 222);
-            this.jTextBox1.Name = "jTextBox1";
-            this.jTextBox1.OnFocus = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.jTextBox1.OnlyChar = false;
-            this.jTextBox1.OnlyNumber = false;
-            this.jTextBox1.Size = new System.Drawing.Size(198, 39);
-            this.jTextBox1.TabIndex = 13;
-            this.jTextBox1.TextValue = "";
+            this.UserInputPass.AutoSize = true;
+            this.UserInputPass.BorderColor = System.Drawing.Color.Black;
+            this.UserInputPass.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.UserInputPass.Hint = "";
+            this.UserInputPass.IsPassword = true;
+            this.UserInputPass.Length = 0;
+            this.UserInputPass.Location = new System.Drawing.Point(61, 222);
+            this.UserInputPass.Name = "UserInputPass";
+            this.UserInputPass.OnFocus = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UserInputPass.OnlyChar = false;
+            this.UserInputPass.OnlyNumber = false;
+            this.UserInputPass.Size = new System.Drawing.Size(198, 39);
+            this.UserInputPass.TabIndex = 13;
+            this.UserInputPass.TextValue = "";
             // 
             // UserInputUserName
             // 
@@ -174,7 +171,6 @@
             this.UserInputUserName.Size = new System.Drawing.Size(200, 39);
             this.UserInputUserName.TabIndex = 12;
             this.UserInputUserName.TextValue = "";
-            this.UserInputUserName.Load += new System.EventHandler(this.UserInputUserName_Load);
             // 
             // panel2
             // 
@@ -184,7 +180,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(341, 92);
             this.panel2.TabIndex = 12;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Form1
             // 
@@ -194,9 +189,9 @@
             this.ClientSize = new System.Drawing.Size(341, 472);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SignInPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Team Byal Dunav Launcher";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.SignInPanel.ResumeLayout(false);
             this.SignInPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -212,7 +207,7 @@
         private System.Windows.Forms.Panel SignInPanel;
         private System.Windows.Forms.Panel panel2;
         private JTextBox.JTextBox UserInputUserName;
-        private JTextBox.JTextBox jTextBox1;
+        private JTextBox.JTextBox UserInputPass;
         private System.Windows.Forms.LinkLabel SignUpLink;
         private System.Windows.Forms.LinkLabel ResetPassLink;
         private System.Windows.Forms.Button LogInBtn;

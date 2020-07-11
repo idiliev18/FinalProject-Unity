@@ -17,26 +17,6 @@ namespace GameLauncher
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TeamName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LogInTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UserInputUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void VisitLinkSignUp()
         {
 
@@ -44,47 +24,17 @@ namespace GameLauncher
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=YZqF5Uun6AQ");
         }
 
-        private void  VisitLinkForgotPass()
+        private void VisitLinkForgotPass()
         {
             ResetPassLink.LinkVisited = true;
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=8UZMGKuLfjY");
         }
 
-
-        private void UserInputUserName_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void user_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Password_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void LogInBtn_Click(object sender, EventArgs e)
         {
-
-        }
-
-
-        private void SignInPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void ErrorMessage_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            var username = UserInputUserName.TextValue;
+            var password = UserInputPass.TextValue;
+            ErrorMessages(username, password);
         }
 
         private void ResetPassLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
@@ -95,6 +45,30 @@ namespace GameLauncher
         private void SignUpLink_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             VisitLinkSignUp();
+        }
+
+        private bool IsPasswordValid(string pass)
+        {
+
+            if (pass.Length < 6)
+            {
+                return false;
+            }
+            return true;
+            
+        }
+
+        private void ErrorMessages(string user, string pass)
+        {
+            if(IsPasswordValid(pass))
+            {
+                ErrorMessage.Text = "";
+                // Kum Vankata
+            }
+            else
+            {
+                ErrorMessage.Text = "Password should be minimum 6 symbols! ";
+            }
         }
     }
 }
