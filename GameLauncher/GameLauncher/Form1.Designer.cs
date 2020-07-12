@@ -33,6 +33,8 @@
             this.user = new System.Windows.Forms.Label();
             this.Password = new System.Windows.Forms.Label();
             this.SignInPanel = new System.Windows.Forms.Panel();
+            this.AllFields = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.ErrorMessage = new System.Windows.Forms.Label();
             this.LogInBtn = new System.Windows.Forms.Button();
             this.SignUpLink = new System.Windows.Forms.LinkLabel();
@@ -40,8 +42,6 @@
             this.UserInputPass = new JTextBox.JTextBox();
             this.UserInputUserName = new JTextBox.JTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.AllFields = new System.Windows.Forms.Label();
             this.SignInPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +82,7 @@
             // 
             // SignInPanel
             // 
+            this.SignInPanel.BackColor = System.Drawing.Color.White;
             this.SignInPanel.Controls.Add(this.AllFields);
             this.SignInPanel.Controls.Add(this.label1);
             this.SignInPanel.Controls.Add(this.ErrorMessage);
@@ -92,10 +93,28 @@
             this.SignInPanel.Controls.Add(this.UserInputUserName);
             this.SignInPanel.Controls.Add(this.Password);
             this.SignInPanel.Controls.Add(this.user);
-            this.SignInPanel.Location = new System.Drawing.Point(4, 12);
+            this.SignInPanel.Location = new System.Drawing.Point(304, 64);
             this.SignInPanel.Name = "SignInPanel";
             this.SignInPanel.Size = new System.Drawing.Size(338, 458);
             this.SignInPanel.TabIndex = 12;
+            // 
+            // AllFields
+            // 
+            this.AllFields.AutoSize = true;
+            this.AllFields.ForeColor = System.Drawing.Color.Red;
+            this.AllFields.Location = new System.Drawing.Point(110, 319);
+            this.AllFields.Name = "AllFields";
+            this.AllFields.Size = new System.Drawing.Size(0, 13);
+            this.AllFields.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "label1";
             // 
             // ErrorMessage
             // 
@@ -180,37 +199,22 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel2.Controls.Add(this.SignIn);
-            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Location = new System.Drawing.Point(304, 64);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(341, 92);
+            this.panel2.Size = new System.Drawing.Size(338, 92);
             this.panel2.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "label1";
-            // 
-            // AllFields
-            // 
-            this.AllFields.AutoSize = true;
-            this.AllFields.ForeColor = System.Drawing.Color.Red;
-            this.AllFields.Location = new System.Drawing.Point(110, 319);
-            this.AllFields.Name = "AllFields";
-            this.AllFields.Size = new System.Drawing.Size(0, 13);
-            this.AllFields.TabIndex = 19;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(343, 472);
+            this.BackColor = System.Drawing.Color.DarkRed;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1000, 596);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.SignInPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
