@@ -34,7 +34,6 @@
             this.Password = new System.Windows.Forms.Label();
             this.SignInPanel = new System.Windows.Forms.Panel();
             this.AllFields = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ErrorMessage = new System.Windows.Forms.Label();
             this.LogInBtn = new System.Windows.Forms.Button();
             this.SignUpLink = new System.Windows.Forms.LinkLabel();
@@ -83,8 +82,8 @@
             // SignInPanel
             // 
             this.SignInPanel.BackColor = System.Drawing.Color.White;
+            this.SignInPanel.Controls.Add(this.panel2);
             this.SignInPanel.Controls.Add(this.AllFields);
-            this.SignInPanel.Controls.Add(this.label1);
             this.SignInPanel.Controls.Add(this.ErrorMessage);
             this.SignInPanel.Controls.Add(this.LogInBtn);
             this.SignInPanel.Controls.Add(this.SignUpLink);
@@ -93,7 +92,7 @@
             this.SignInPanel.Controls.Add(this.UserInputUserName);
             this.SignInPanel.Controls.Add(this.Password);
             this.SignInPanel.Controls.Add(this.user);
-            this.SignInPanel.Location = new System.Drawing.Point(304, 64);
+            this.SignInPanel.Location = new System.Drawing.Point(326, 64);
             this.SignInPanel.Name = "SignInPanel";
             this.SignInPanel.Size = new System.Drawing.Size(338, 458);
             this.SignInPanel.TabIndex = 12;
@@ -106,15 +105,6 @@
             this.AllFields.Name = "AllFields";
             this.AllFields.Size = new System.Drawing.Size(0, 13);
             this.AllFields.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "label1";
             // 
             // ErrorMessage
             // 
@@ -199,7 +189,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.panel2.Controls.Add(this.SignIn);
-            this.panel2.Location = new System.Drawing.Point(304, 64);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(338, 92);
             this.panel2.TabIndex = 12;
@@ -212,8 +202,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 596);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.SignInPanel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -240,7 +230,6 @@
         private System.Windows.Forms.Button LogInBtn;
         private System.Windows.Forms.Label ErrorMessage;
         private System.Windows.Forms.Label AllFields;
-        private System.Windows.Forms.Label label1;
     }
 }
 
