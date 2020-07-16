@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginFromPanel = new System.Windows.Forms.Panel();
             this.LoginFailedLabel = new System.Windows.Forms.Label();
@@ -45,6 +46,9 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.TitlePanel = new System.Windows.Forms.Panel();
             this.TitleLabel = new System.Windows.Forms.Label();
+            this.RememberMe = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LoginFromPanel.SuspendLayout();
             this.HRPanelUsername.SuspendLayout();
             this.TitlePanel.SuspendLayout();
@@ -53,6 +57,7 @@
             // LoginFromPanel
             // 
             this.LoginFromPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.LoginFromPanel.Controls.Add(this.RememberMe);
             this.LoginFromPanel.Controls.Add(this.LoginFailedLabel);
             this.LoginFromPanel.Controls.Add(this.ShortPassLabel);
             this.LoginFromPanel.Controls.Add(this.AllReqLabel);
@@ -66,7 +71,7 @@
             this.LoginFromPanel.Controls.Add(this.HRPanelPassword);
             this.LoginFromPanel.Controls.Add(this.HRPanelUsername);
             this.LoginFromPanel.Controls.Add(this.TitlePanel);
-            this.LoginFromPanel.Location = new System.Drawing.Point(304, 48);
+            this.LoginFromPanel.Location = new System.Drawing.Point(361, 73);
             this.LoginFromPanel.Name = "LoginFromPanel";
             this.LoginFromPanel.Size = new System.Drawing.Size(300, 450);
             this.LoginFromPanel.TabIndex = 0;
@@ -235,6 +240,31 @@
             this.TitleLabel.TabIndex = 0;
             this.TitleLabel.Text = "Team Byal Dunav";
             // 
+            // RememberMe
+            // 
+            this.RememberMe.AutoSize = true;
+            this.RememberMe.Location = new System.Drawing.Point(202, 396);
+            this.RememberMe.Name = "RememberMe";
+            this.RememberMe.Size = new System.Drawing.Size(95, 17);
+            this.RememberMe.TabIndex = 13;
+            this.RememberMe.Text = "Remember Me";
+            this.RememberMe.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(133, 143);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 64);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            //this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,6 +273,7 @@
             this.BackgroundImage = global::GameLauncher.Properties.Resources.background_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 596);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.LoginFromPanel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -251,6 +282,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Team Byal Dunav Launcher";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.LoginFromPanel.ResumeLayout(false);
             this.LoginFromPanel.PerformLayout();
             this.HRPanelUsername.ResumeLayout(false);
@@ -278,6 +310,9 @@
         private System.Windows.Forms.Label ShortPassLabel;
         private System.Windows.Forms.Label AllReqLabel;
         private System.Windows.Forms.Label LoginFailedLabel;
+        private System.Windows.Forms.CheckBox RememberMe;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

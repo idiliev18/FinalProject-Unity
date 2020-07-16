@@ -12,6 +12,7 @@ namespace GameLauncher
 {
     public partial class LoginForm : Form
     {
+        public Main mainForm { get; set; }
         public LoginForm()
         {
             InitializeComponent();
@@ -60,6 +61,24 @@ namespace GameLauncher
         {
             AccountYok.LinkVisited = true;
             System.Diagnostics.Process.Start("https://www.youtube.com/watch?v=YZqF5Uun6AQ");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mainForm = new Main();
+            mainForm.Show();
+            this.Hide();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Enabled = false;
+            button1_Click(this, null);
         }
     }
 }
