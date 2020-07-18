@@ -26,6 +26,5 @@ namespace GameLauncher
         {
             Application.Exit();
         }
-
     }
 }
