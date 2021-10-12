@@ -50,6 +50,6 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
