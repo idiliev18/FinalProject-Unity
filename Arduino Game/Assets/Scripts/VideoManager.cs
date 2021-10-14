@@ -9,11 +9,21 @@ public class VideoManager : MonoBehaviour
     public VideoClip PromotionClip;
     public VideoClip VVClip = null;
     public VideoPlayer videoPlayer;
+    public AchievementsManager achievementsManager;
+
 
     private void OnMouseOver() {
         if (Input.GetKeyDown(KeyCode.E)) {
             count++;
             if (count == 1) {
+                if (VVClip == null) 
+                {
+                    achievementsManager.unlockAchievement(achievementsManager.christmassAchievement);
+                } else 
+                {
+                    achievementsManager.unlockAchievement(achievementsManager.whatGreatVideoAchievement);
+                }
+
                 videoPlayer.targetTexture.Release();
                 videoPlayer.Stop();
                 videoPlayer.clip = PromotionClip;
@@ -21,6 +31,7 @@ public class VideoManager : MonoBehaviour
             }
             else if (count == 10) {
                 if (VVClip != null) {
+                    achievementsManager.unlockAchievement(achievementsManager.classAchievement);
                     videoPlayer.targetTexture.Release();
                     videoPlayer.Stop();
                     videoPlayer.clip = VVClip;
