@@ -2160,7 +2160,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &462656076
 Transform:
@@ -6903,8 +6903,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1041205151}
   - component: {fileID: 1041205156}
-  - component: {fileID: 1041205155}
-  - component: {fileID: 1041205154}
   - component: {fileID: 1041205153}
   - component: {fileID: 1041205152}
   m_Layer: 9
@@ -6988,7 +6986,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: 0
+  m_TextStyleHashCode: -1183493901
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -7000,9 +6998,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 514
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -7038,22 +7036,6 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!222 &1041205154
-CanvasRenderer:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041205150}
-  m_CullTransparentMesh: 0
---- !u!33 &1041205155
-MeshFilter:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041205150}
-  m_Mesh: {fileID: 0}
 --- !u!23 &1041205156
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8118,11 +8100,11 @@ GameObject:
   - component: {fileID: 1110675762}
   - component: {fileID: 1110675761}
   m_Layer: 9
-  m_Name: arduino (1)
+  m_Name: arduino 123
   m_TagString: Arduino
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1110675760
 Transform:
@@ -8151,6 +8133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbf01c06bf5cbfd4dafefd26573fa744, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  achievementsManager: {fileID: 1157783157}
   unhideObject: {fileID: 2534866582503546755}
   hint: {fileID: 1041205150}
 --- !u!65 &1110675762
@@ -8464,6 +8447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1157783156}
   - component: {fileID: 1157783155}
+  - component: {fileID: 1157783157}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8501,6 +8485,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157783157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157783154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f45c8eb113c964e4787c0588afea3634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1160447474
 GameObject:
   m_ObjectHideFlags: 0
@@ -10026,7 +10022,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1345863149
 Transform:
@@ -13956,7 +13952,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1868688093
 Transform:

@@ -18,6 +18,8 @@ public class pinScript : MonoBehaviour
     public DialogueManager dialogueManager2;
     public AudioSource audioSource2;
 
+    public AchievementsManager achievementsManager;
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Enter"); 
@@ -50,6 +52,16 @@ public class pinScript : MonoBehaviour
     {
         if (plusAndMinus.plus == true && plusAndMinus.minus == true)
         {
+            if (achievementsManager != null)
+            {
+                if (SceneManager.GetActiveScene().buildIndex == 1)
+                {
+                    achievementsManager.unlockAchievement(achievementsManager.theStartAchievement);
+                } else 
+                {
+                    achievementsManager.unlockAchievement(achievementsManager.thePushAchievement);
+                }
+            }
             StartCoroutine(Wait());
             LEDLight.SetActive(true);
             dialogueManager.StartDialogue(dialogue);

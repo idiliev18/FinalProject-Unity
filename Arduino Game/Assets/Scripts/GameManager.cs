@@ -19,6 +19,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            ShowCanvas();
+        }
+    }
+
+    public void ShowCanvas()
+    {
             isShownCanvas = !isShownCanvas;
             pauseMenu.SetActive(isShownCanvas);
 
@@ -34,7 +40,6 @@ public class GameManager : MonoBehaviour
                 playerMovement.enabled = false;
                 Cursor.lockState = CursorLockMode.None;
             }
-        }
     }
 
     public void Resume()

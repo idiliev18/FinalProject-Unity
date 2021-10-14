@@ -5,23 +5,43 @@ using UnityEngine.Animations.Rigging;
 
 public class hideUnhide1 : MonoBehaviour
 {
+    public AchievementsManager achievementsManager;
     public GameObject unhideObject;
 
     public GameObject hint;
 
     void OnMouseOver()
     {
-        hint.SetActive(true);
+        if (hint != null)
+        {
+            hint.SetActive(true);
+        }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            unhideObject.SetActive(true);
-            gameObject.SetActive(false);
+            if (unhideObject != null)
+            {
+                unhideObject.SetActive(true);
+                gameObject.SetActive(false);
+            }
+
+            if (this.name == "arduino 123" && achievementsManager != null)
+            {
+                achievementsManager.unlockAchievement(achievementsManager.arduinoAchievement);
+            }
+
+            if (this.name == "coffee mug - COFFEE MUG BODY-1" && achievementsManager != null)
+            {
+                achievementsManager.unlockAchievement(achievementsManager.coffeeAchievement);
+            }
         }
     }
     
     void OnMouseExit()
     {
-        hint.SetActive(false);
+        if (hint != null)
+        {
+            hint.SetActive(false);
+        }
     }
 }

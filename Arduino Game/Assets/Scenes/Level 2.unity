@@ -5890,6 +5890,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3612920084931413624, guid: ab9a07c023e61ff4da84850957166ed2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3612920084931413625, guid: ab9a07c023e61ff4da84850957166ed2,
         type: 3}
       propertyPath: m_RootOrder
@@ -20087,6 +20092,7 @@ MonoBehaviour:
     sentences: []
   dialogueManager2: {fileID: 0}
   audioSource2: {fileID: 0}
+  achievementsManager: {fileID: 0}
 --- !u!65 &10477193484333788
 BoxCollider:
   m_ObjectHideFlags: 0
