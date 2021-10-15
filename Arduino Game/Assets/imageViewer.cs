@@ -14,7 +14,7 @@ public class imageViewer : MonoBehaviour
 
     private void LateUpdate() 
     {
-        if (image.active && Input.GetKeyDown(KeyCode.Escape))
+        if (image.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
         {
             image.SetActive(false);
             playerMovement.enabled = true;

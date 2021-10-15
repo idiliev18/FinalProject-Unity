@@ -28,7 +28,6 @@ public class ObjectsSelect : MonoBehaviour
 
             if (hit)
             {
-                Debug.Log("Hit " + hitInfo.transform.gameObject.name);
                 if (hitInfo.transform.gameObject.tag == "Arduino")
                 {
                     arduinoOutline.SetActive(true);

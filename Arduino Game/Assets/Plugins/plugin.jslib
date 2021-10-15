@@ -1,12 +1,16 @@
-mergeInto(LibraryManager.library, {
-  SaveLocalStorage: function (value) {
-    this.activeUser = JSON.parse(localStorage.getItem('activeUser'));
-    if (activeUser) {
+var LocalStoragePlugin = {
+  $MyData: {
+       activeUser: null,
+   },
 
-       this.activeUser.achievements.push(value);
+  SaveLocalStorage: function (value) {
+    MyData.activeUser = JSON.parse(localStorage.getItem('activeUser'));
+
+    if (MyData.activeUser) {
+      MyData.activeUser.achievements.push(value);
       
-      if(Set(this.activeUser.achievements).size === this.activeUser.achievements.length){
-        localStorage.setItem('activeUser', JSON.stringify(this.activeUser));
+      if(new Set(MyData.activeUser.achievements).size === MyData.activeUser.achievements.length) {
+        localStorage.setItem('activeUser', JSON.stringify(MyData.activeUser));
       } else {
         console.log("Achievement already unlocked");
       }
@@ -16,7 +20,18 @@ mergeInto(LibraryManager.library, {
     }
   },
 
-  LoadLocalStorage: function (key) {
-    localStorage.getItem(Pointer_stringify(key));
+  LoadLocalStorage: function (value1) {
+    MyData.activeUser = JSON.parse(localStorage.getItem('activeUser'));
+    
+    if (MyData.activeUser) {
+      var str = MyData.activeUser.achievements.join(' ');
+      return str;
+    } else {
+      console.log('No active user, when getting achievements');
+      return "";
+    }
   },
-});
+};
+
+autoAddDeps(LocalStoragePlugin, '$MyData');
+mergeInto(LibraryManager.library, LocalStoragePlugin);

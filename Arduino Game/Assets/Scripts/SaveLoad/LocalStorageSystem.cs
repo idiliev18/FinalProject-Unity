@@ -7,5 +7,5 @@ public class LocalStorageSystem : MonoBehaviour
     public static extern void SaveLocalStorage(int value);
 
     [DllImport("__Internal")]
-    public static extern string LoadLocalStorage(string key);
+    public static extern string LoadLocalStorage();
 }

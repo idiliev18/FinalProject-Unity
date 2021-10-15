@@ -28,6 +28,6 @@ public class UnlockAchievementAtColision : MonoBehaviour
         Debug.Log("Start");
         yield return new WaitForSecondsRealtime(3f);
         Debug.Log("Stop");
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
