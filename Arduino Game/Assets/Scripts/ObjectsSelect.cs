@@ -20,6 +20,7 @@ public class ObjectsSelect : MonoBehaviour
 
     void Update()
     {
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hitInfo = new RaycastHit();
@@ -28,6 +29,7 @@ public class ObjectsSelect : MonoBehaviour
 
             if (hit)
             {
+                /*
                 if (hitInfo.transform.gameObject.tag == "Arduino")
                 {
                     arduinoOutline.SetActive(true);
@@ -43,19 +45,19 @@ public class ObjectsSelect : MonoBehaviour
 
                 if (hitInfo.transform.gameObject.tag == "LED")
                 {
-                    LEDOutline.SetActive(true);
-                    dragObjectsLED.enabled = true;
+                    //LEDOutline.SetActive(true);
+                    //dragObjectsLED.enabled = true;
                     //isSelecLED = true;
                 }
                 else
                 {
-                    dragObjectsLED.enabled = false;
-                    LEDOutline.SetActive(false);
+                    //dragObjectsLED.enabled = false;
+                   // LEDOutline.SetActive(false);
                     //isSelecLED = false;
                 }
             }
         }
-
+        */
 
         /*
         ////////////////////////////////////////////////////

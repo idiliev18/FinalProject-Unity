@@ -9952,7 +9952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983026880}
   m_LocalRotation: {x: 0.6237516, y: 0.02582306, z: 0.0066866125, w: 0.7811674}
-  m_LocalPosition: {x: -73.46055, y: 34.530178, z: -41.846657}
+  m_LocalPosition: {x: -73.6925, y: 34.1713, z: -41.7612}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.29999998}
   m_Children:
   - {fileID: 1034835253}
@@ -73809,8 +73809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e698fad90c63b9540b6a2fb1ddf9f331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PromotionClip: {fileID: 32900000, guid: 0b352534dc805784fb77d54dd203b32f, type: 3}
-  VVClip: {fileID: 0}
+  PromotionClip: /Video Files/Christmas.mp4
+  VVClip: 
   videoPlayer: {fileID: 1908913563}
   achievementsManager: {fileID: 1157783157}
 --- !u!23 &6297758889798770011
@@ -85265,8 +85265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e698fad90c63b9540b6a2fb1ddf9f331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PromotionClip: {fileID: 32900000, guid: 448c1cd22ebf0404a8e6e28633484997, type: 3}
-  VVClip: {fileID: 32900000, guid: 58171163eefb0f941ac5e11d80cb761f, type: 3}
+  PromotionClip: /Video Files/PromotionClip1.mp4
+  VVClip: /Video Files/VV clip.mp4
   videoPlayer: {fileID: 1164470084}
   achievementsManager: {fileID: 1157783157}
 --- !u!23 &7390273319812436194

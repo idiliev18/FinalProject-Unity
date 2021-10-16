@@ -14,7 +14,10 @@ public class hideUnhide : MonoBehaviour
         {
             unhideObject.SetActive(true);
             gameObject.SetActive(false);
-            button.SetActive(true);
+            if (button != null)
+            {
+                button.SetActive(true);
+            }
         }
     }
 }

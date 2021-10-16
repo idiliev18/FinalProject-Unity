@@ -13,11 +13,17 @@ public class plusAndMinus : MonoBehaviour
     {
         if (plus & minus)
         {
-            enterHint.SetActive(true);
+            if (enterHint != null)
+            {
+                enterHint.SetActive(true);
+            }
         }
         else
         {
-            enterHint.SetActive(false);
+             if (enterHint != null)
+            {
+                enterHint.SetActive(false);
+            }
         }
     }
 }

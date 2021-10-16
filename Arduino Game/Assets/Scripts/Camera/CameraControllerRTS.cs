@@ -16,7 +16,7 @@ public class CameraControllerRTS : MonoBehaviour
     void Update()
     {
         Vector3 pos = transform.position;
-        if (SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
             {
@@ -30,7 +30,7 @@ public class CameraControllerRTS : MonoBehaviour
             {
                 pos.z -= panSpeed * Time.deltaTime;
             }
-            if (Input.GetKey("d") || Input.mousePosition.x >= Screen.height - panBorderThickness)
+            if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
             {
                 pos.z += panSpeed * Time.deltaTime;
             }
@@ -38,9 +38,9 @@ public class CameraControllerRTS : MonoBehaviour
             scroll = Input.GetAxis("Mouse ScrollWheel");
             pos.y -= scroll * scrollSpeed * Time.deltaTime;
         }
-        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            if (Input.GetKey("w") || Input.mousePosition.x >= Screen.height - panBorderThickness)
+            if (Input.GetKey("w") || Input.mousePosition.x >= Screen.width - panBorderThickness)
             {
                 pos.x -= panSpeed * Time.deltaTime;
             }

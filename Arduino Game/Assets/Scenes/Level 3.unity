@@ -3594,6 +3594,99 @@ Transform:
   m_Father: {fileID: 202669999}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &439560008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439560009}
+  - component: {fileID: 439560010}
+  m_Layer: 1
+  m_Name: Point Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &439560009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439560008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.217, y: 11.078, z: 12.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1893957600947877331}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &439560010
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439560008}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 100
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 2
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &443683594
 GameObject:
   m_ObjectHideFlags: 0
@@ -8277,6 +8370,99 @@ Transform:
   m_Father: {fileID: 2018348961}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &882321468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882321469}
+  - component: {fileID: 882321470}
+  m_Layer: 1
+  m_Name: Point Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &882321469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882321468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.489, y: 14.79, z: 12.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1893957600947877331}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &882321470
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882321468}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 100
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 2
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &885214427
 GameObject:
   m_ObjectHideFlags: 0
@@ -19916,6 +20102,99 @@ Transform:
   m_Father: {fileID: 1301090347}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90.796005, z: 0}
+--- !u!1 &1853110991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1853110992}
+  - component: {fileID: 1853110993}
+  m_Layer: 1
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1853110992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853110991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.217, y: 12.73, z: 12.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1893957600947877331}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1853110993
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853110991}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 100
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 2
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1856724376
 GameObject:
   m_ObjectHideFlags: 0
@@ -28221,7 +28500,7 @@ GameObject:
   - component: {fileID: 5233066029766731269}
   - component: {fileID: 1366060129088493353}
   - component: {fileID: 421542230608192482}
-  m_Layer: 9
+  m_Layer: 1
   m_Name: School Firm - Room 8-1 Toilet-3 Toilet Main Body-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29634,7 +29913,7 @@ GameObject:
   - component: {fileID: 5223864759711122092}
   - component: {fileID: 4386793105060555395}
   - component: {fileID: 573696269463265564}
-  m_Layer: 9
+  m_Layer: 1
   m_Name: School Firm - Room 8-1 Toilet-3 Seat Up-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41831,7 +42110,7 @@ GameObject:
   - component: {fileID: 2963124861649445874}
   - component: {fileID: 3009444119763341525}
   - component: {fileID: 1807226112673691183}
-  m_Layer: 9
+  m_Layer: 1
   m_Name: School Firm - Room 8-1 Toilet-3 Toilet Main Body-1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43000,7 +43279,10 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0.06906062, y: 0, z: -1.8138931}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1853110992}
+  - {fileID: 439560009}
+  - {fileID: 882321469}
   m_Father: {fileID: 6482803671129056144}
   m_RootOrder: 243
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44747,7 +45029,7 @@ GameObject:
   - component: {fileID: 2486566395726209169}
   - component: {fileID: 453391759908416809}
   - component: {fileID: 2055802406439676501}
-  m_Layer: 9
+  m_Layer: 1
   m_Name: School Firm - Room 5-1 Table Ah-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85567,7 +85849,7 @@ GameObject:
   - component: {fileID: 5653820522265583188}
   - component: {fileID: 2698819806544726039}
   - component: {fileID: 5962952598205049618}
-  m_Layer: 9
+  m_Layer: 1
   m_Name: School Firm - Room 8-1 Toilet-3 Seat Down-1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89034,8 +89316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e698fad90c63b9540b6a2fb1ddf9f331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PromotionClip: {fileID: 32900000, guid: 0b352534dc805784fb77d54dd203b32f, type: 3}
-  VVClip: {fileID: 0}
+  PromotionClip: /Video Files/Christmas.mp4
+  VVClip: 
   videoPlayer: {fileID: 6297279947703496841}
   achievementsManager: {fileID: 1157783157}
 --- !u!23 &6297758889798770011
@@ -92007,7 +92289,7 @@ GameObject:
   - component: {fileID: 6656955024762134779}
   - component: {fileID: 6350114735456827587}
   - component: {fileID: 6528966939032557156}
-  m_Layer: 8
+  m_Layer: 1
   m_Name: School Firm - Room 5-1 Projector-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95847,7 +96129,7 @@ GameObject:
   - component: {fileID: 317325515845302799}
   - component: {fileID: 5720192480840206376}
   - component: {fileID: 6893276795330296323}
-  m_Layer: 9
+  m_Layer: 1
   m_Name: School Firm - Room 8-1 Toilet-3 Seat Down-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98629,7 +98911,7 @@ GameObject:
   - component: {fileID: 4311953073262403439}
   - component: {fileID: 5682338911296585193}
   - component: {fileID: 7185321286036230101}
-  m_Layer: 8
+  m_Layer: 1
   m_Name: School Firm - Room 9-1 Cardboard-1 Cb Body-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100774,8 +101056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e698fad90c63b9540b6a2fb1ddf9f331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PromotionClip: {fileID: 32900000, guid: 448c1cd22ebf0404a8e6e28633484997, type: 3}
-  VVClip: {fileID: 32900000, guid: 58171163eefb0f941ac5e11d80cb761f, type: 3}
+  PromotionClip: /Video Files/PromotionClip1.mp4
+  VVClip: /Video Files/VV clip.mp4
   videoPlayer: {fileID: 7389815570304742137}
   achievementsManager: {fileID: 1157783157}
 --- !u!23 &7390273319812436194
@@ -125691,7 +125973,7 @@ GameObject:
   - component: {fileID: 5902670194289904695}
   - component: {fileID: 4479184614803907014}
   - component: {fileID: 8952976467982910116}
-  m_Layer: 9
+  m_Layer: 1
   m_Name: School Firm - Room 8-1 Toilet-3 Seat Up-4.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
